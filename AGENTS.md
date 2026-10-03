@@ -21,8 +21,8 @@ La solicitud inicial es organizar y documentar; no ejecutar pruebas activas auto
 
 1. Leer el estado y seleccionar tarea. Para una nueva prueba, copiar `plantillas/PRUEBA.md` a `specs/pruebas/` y definir objetivo, evidencia, límites y criterio de cierre.
 2. Registrar hipótesis y procedimiento antes de ejecutarlo. Se permite evolución iterativa; documentar decisiones en `docs/decisiones.md`.
-3. Documentar la sesión en el CherryTree del autor. No modificar simultáneamente el cuaderno de otro integrante ni fusionar XML/SQLite a mano.
-4. Registrar evidencia en `evidencias/indice.csv`, con ruta relativa, autor, instancia, fecha, descripción, interpretación y SHA-256. Los artefactos originales son inmutables; las versiones redactadas son archivos distintos.
+3. Documentar la sesión en el CherryTree del autor. Consultar `cherrytree/cuadernos.json`: dos CTB y dos CTD con el árbol de Jaime. No modificar simultáneamente cuadernos ni fusionar XML/SQLite a ciegas. Una reorganización solicitada por el usuario requiere respaldo, comprobación de integridad y preservación de textos e imágenes originales.
+4. Registrar evidencia en `evidencias/indice.csv`, con ruta relativa, autor, instancia, fecha, descripción, interpretación y SHA-256. Si la fecha exacta no está sustentada, usar `no-registrada` y explicar la precisión disponible en su ficha; nunca inventar una hora. Los artefactos originales son inmutables; las versiones redactadas son archivos distintos.
 5. Crear ficha desde plantilla y reservar PT-NNN en `hallazgos/indice.csv`. Revisar con otro integrante antes de incorporarla al informe.
 6. Actualizar fase PTES, informe, tareas y estado sin declarar completa una fase que carece de evidencia.
 7. Ejecutar `python3 scripts/validar.py`; comunicar sus límites y pendientes. No considerar su salida aprobación del PDF final.

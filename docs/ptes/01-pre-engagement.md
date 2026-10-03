@@ -1,14 +1,9 @@
 # Pre-Engagement
 
-Estado: pendiente de evidencia propia.
+Estado: avance parcial revisado documentalmente el 2026-10-03.
 
-Alcance real, modalidad, exclusiones, RoE y arquitectura. Completar docs/02-alcance-roe.md con evidencia del laboratorio.
+Jaime documenta RoE, modalidad Black Box y Host-Only VMnet11; son declaraciones por revisar con evidencia del hipervisor y conocimiento previo. Existen dos instancias: LAB-JACD y LAB-EJVA. Ver docs/02-alcance-roe.md. Falta snapshot, procedencia de imagen y confirmación de aislamiento.
 
-## Registro de avance
+## Pendientes
 
-| Sesión / TEST | Instancia | EV | PT si aplica | Observación | Interpretación y siguiente paso | Revisor |
-|---|---|---|---|---|---|---|
-
-## Cobertura, límites y cierre
-
-PENDIENTE. Registrar lo intentado, lo no probado y por qué. No marcar completa esta fase solo por disponer de esta plantilla.
+Completar evidencia faltante, fechas y revisión cruzada. Registrar pruebas propuestas desde plantillas/PRUEBA.md y resultados reales por sesión. La revisión actual no reproduce las pruebas.

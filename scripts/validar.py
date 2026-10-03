@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Valida estructura documental; no ejecuta pruebas de red ni altera evidencia."""
 import csv
+import json
+import sqlite3
 import hashlib
 import re
 import sys
@@ -56,6 +58,8 @@ def refs(value):
 
 
 def main():
+    ERRORS.clear()
+    WARNINGS.clear()
     for required in ['README.md', 'AGENTS.md', 'CLAUDE.md',
                      'docs/01-analisis-parcial.md', 'docs/02-alcance-roe.md',
                      'docs/estado.md', 'specs/001-documentacion/spec.md',
@@ -70,23 +74,74 @@ def main():
             error('Informe: se esperan 25 apartados numerados en orden')
         if 'PENDIENTE' in text:
             WARNINGS.append('Informe todavía contiene pendientes; no está listo para entregar.')
-    books = sorted((ROOT / 'cherrytree/individuales').glob('*.ctd'))
-    expected = {'JDOG_38402.ctd', 'JACD_40549.ctd', 'DQH_31429.ctd', 'EJVA_37831.ctd'}
-    if {p.name for p in books} != expected:
-        error('Se esperan los cuatro cuadernos individuales .ctd documentados')
+    books = []
+    try:
+        inventory = json.loads((ROOT / 'cherrytree/cuadernos.json').read_text())
+        if len(inventory) != 4 or {r['autor'] for r in inventory} != AUTHORS:
+            error('Inventario: se esperan cuatro autores únicos')
+        if len({r['ruta'] for r in inventory}) != len(inventory):
+            error('Inventario: rutas de cuadernos repetidas')
+        books = [safe_file(r['ruta']) for r in inventory]
+        active = set((ROOT / 'cherrytree/individuales').glob('*.ct[bd]'))
+        if active != set(books):
+            error('Hay cuadernos activos fuera del inventario o falta alguno')
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        error(f'Inventario de cuadernos: {exc}')
     for book in books:
         try:
-            root = ET.parse(book).getroot()
-            nodes = list(root.iter('node'))
-            ids = [n.get('unique_id') for n in nodes]
-            if root.tag != 'cherrytree' or not nodes:
-                error(f'{book.name}: estructura CherryTree vacía o incorrecta')
-            if any(not value or not value.isdigit() for value in ids) or len(set(ids)) != len(ids):
-                error(f'{book.name}: IDs de nodo inválidos o duplicados')
-            for n in nodes:
-                if not n.get('name') or n.get('prog_lang') != 'custom-colors':
-                    error(f'{book.name}: nodo sin nombre o formato inesperado')
-        except (ET.ParseError, OSError) as exc:
+            if book.suffix == '.ctd':
+                root = ET.parse(book).getroot()
+                nodes = list(root.iter('node'))
+                ids = [n.get('unique_id') for n in nodes]
+                if root.tag != 'cherrytree' or not nodes:
+                    error(f'{book.name}: estructura CherryTree vacía o incorrecta')
+                if any(not value or not value.isdigit() for value in ids) or len(set(ids)) != len(ids):
+                    error(f'{book.name}: IDs de nodo inválidos o duplicados')
+                for n in nodes:
+                    if not n.get('name') or not n.get('prog_lang'):
+                        error(f'{book.name}: nodo sin nombre o formato')
+            elif book.suffix == '.ctb':
+                connection = sqlite3.connect(book.as_uri() + '?mode=ro', uri=True)
+                try:
+                    if connection.execute('pragma integrity_check').fetchall() != [('ok',)]:
+                        error(f'{book.name}: integridad SQLite fallida')
+                    nodes = connection.execute('select node_id,name,txt,has_image from node').fetchall()
+                    ids = {n[0] for n in nodes}
+                    edges = connection.execute('select node_id,father_id,sequence from children').fetchall()
+                    if {e[0] for e in edges} != ids or len(edges) != len(ids):
+                        error(f'{book.name}: nodos ausentes o duplicados en jerarquía')
+                    parents = {n: parent for n, parent, _ in edges}
+                    if sum(parent == 0 for parent in parents.values()) != 1:
+                        error(f'{book.name}: debe haber una raíz activa')
+                    positions = [(parent, seq) for _, parent, seq in edges]
+                    if len(set(positions)) != len(positions):
+                        error(f'{book.name}: orden de hermanos duplicado')
+                    for node_id in ids:
+                        seen = set()
+                        current = node_id
+                        while current != 0:
+                            if current in seen or current not in parents:
+                                error(f'{book.name}: ciclo o padre ausente desde {node_id}')
+                                break
+                            seen.add(current)
+                            current = parents[current]
+                    for node_id, name, txt, has_image in nodes:
+                        if not name:
+                            error(f'{book.name}: nodo sin nombre {node_id}')
+                        if txt:
+                            ET.fromstring(txt)
+                        count = connection.execute('select count(*) from image where node_id=?', (node_id,)).fetchone()[0]
+                        if bool(count) != bool(has_image):
+                            error(f'{book.name}: bandera de imagen incoherente en {node_id}')
+                    for table in ['image', 'codebox', 'grid', 'bookmark']:
+                        for (node_id,) in connection.execute(f'select node_id from {table}'):
+                            if node_id not in ids:
+                                error(f'{book.name}: {table} referencia nodo ausente {node_id}')
+                finally:
+                    connection.close()
+            else:
+                error(f'{book.name}: formato no soportado')
+        except (ET.ParseError, sqlite3.Error, OSError) as exc:
             error(f'{book.name}: {exc}')
     ev = read_index('evidencias/indice.csv',
                     ['id', 'fecha', 'autor', 'instancia', 'fase', 'ruta', 'sha256',
@@ -101,11 +156,14 @@ def main():
                 error(f'{key}: falta {field}')
         if row['autor'] not in AUTHORS or not key.startswith(f"EV-{row['autor']}-"):
             error(f'{key}: autor incoherente con ID')
-        try:
-            if datetime.fromisoformat(row['fecha']).utcoffset() is None:
-                raise ValueError('sin zona horaria')
-        except ValueError:
-            error(f'{key}: fecha ISO 8601 con zona requerida')
+        if row['fecha'] == 'no-registrada':
+            WARNINGS.append(f'{key}: fecha exacta no registrada; revisar precisión en ficha.')
+        else:
+            try:
+                if datetime.fromisoformat(row['fecha']).utcoffset() is None:
+                    raise ValueError('sin zona horaria')
+            except ValueError:
+                error(f'{key}: fecha ISO 8601 con zona o no-registrada requerida')
         try:
             path = safe_file(row['ruta'])
             digest = hashlib.sha256()
@@ -149,7 +207,7 @@ def main():
         print('PENDIENTE:', message)
     for message in ERRORS:
         print('ERROR:', message)
-    print(f'{len(books)} cuadernos XML · {len(ev)} evidencias · {len(pt)} hallazgos · {len(ERRORS)} errores')
+    print(f'{len(books)} cuadernos XML/SQLite · {len(ev)} evidencias · {len(pt)} hallazgos · {len(ERRORS)} errores')
     print('Control estructural solamente: no certifica CherryTree UI, CVSS ni PDF final.')
     return 1 if ERRORS else 0
 

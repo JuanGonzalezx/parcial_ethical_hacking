@@ -1,6 +1,6 @@
 # Reporting
 
-Estado: pendiente de evidencia propia.
+Estado: borrador actualizado con reconocimiento/enumeración de dos instancias y 13 capturas integradas en la fuente Markdown. Exportación y revisión del PDF pendientes.
 
 Integrar las evidencias en los 25 apartados, diagrama propio de cadena real, impacto y remediaciones. Revisar PDF y defensa con docs/04-defensa-y-entrega.md.
 

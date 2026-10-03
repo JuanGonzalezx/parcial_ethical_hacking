@@ -1,14 +1,9 @@
 # Intelligence Gathering
 
-Estado: pendiente de evidencia propia.
+Estado: avance parcial revisado documentalmente el 2026-10-03.
 
-Descubrimiento de IP e identidad, conectividad, TCP/UDP pertinente, servicios/versiones, tecnologías, directorios, usuarios y recursos. Interpretar cada resultado y registrar decisión siguiente.
+EV-JACD-001/002 respaldan ARP y ping a .18.130. Los puertos escritos por Jaime aún carecen de Nmap adjunto. EV-EJVA-002 a 005 respaldan red, escaneo TCP y servicios en .81.130. No mezclar ambos laboratorios. Detalles y límites: docs/revision-cherrytree-2026-10-03.md y evidencias/fichas/.
 
-## Registro de avance
+## Pendientes
 
-| Sesión / TEST | Instancia | EV | PT si aplica | Observación | Interpretación y siguiente paso | Revisor |
-|---|---|---|---|---|---|---|
-
-## Cobertura, límites y cierre
-
-PENDIENTE. Registrar lo intentado, lo no probado y por qué. No marcar completa esta fase solo por disponer de esta plantilla.
+Completar evidencia faltante, fechas y revisión cruzada. Registrar pruebas propuestas desde plantillas/PRUEBA.md y resultados reales por sesión. La revisión actual no reproduce las pruebas.

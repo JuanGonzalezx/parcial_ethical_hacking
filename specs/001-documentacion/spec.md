@@ -1,6 +1,6 @@
 # SPEC-001 · Sistema documental MnzHack
 
-Estado: estructura inicial implementada; operación y entrega pendientes.
+Estado: estructura implementada; primera integración de reconocimiento completada el 2026-10-03. Validación técnica y entrega pendientes.
 
 ## Necesidad
 
@@ -12,7 +12,7 @@ Cuatro integrantes deben registrar un pentest PTES de DC-1 y producir un único 
 |---|---|---|
 | DOC-01 | Preservar fuentes docentes | Docs_Base sin alteraciones |
 | DOC-02 | Alinear trabajo con rúbrica | Matriz de 100 puntos y desglose de 25 documentados |
-| DOC-03 | Cuatro espacios individuales | .ctd con identidad, PTES y plantillas por autor |
+| DOC-03 | Cuatro espacios individuales | Cuatro archivos activos CTB/CTD con identidad, árbol de Jaime y plantillas por autor |
 | DOC-04 | Evidencias trazables | Índice, autor, fecha, instancia, hash y conexión a PT/figura |
 | DOC-05 | Hallazgos reproducibles | Plantilla con todos los campos de p. 5 y revisión cruzada |
 | DOC-06 | Coordinación de asistentes | AGENTS canónico y CLAUDE como puente |
@@ -25,7 +25,7 @@ Ejecutar pruebas activas, afirmar puertos o vulnerabilidades, producir un PDF qu
 
 ## Definition of Done del arranque
 
-Estructura creada, cuatro XML válidos, plantillas e índices vacíos, análisis de fuentes, plan y pendientes explícitos. Abrir/guardar los cuadernos en la versión de CherryTree del equipo sigue siendo una comprobación operativa pendiente; validez XML no equivale a prueba de UI.
+Criterio histórico del arranque: estructura, cuatro plantillas XML válidas, índices vacíos, análisis de fuentes y plan. La integración posterior se especifica en SPEC-002 y usa dos CTB y dos CTD con evidencia recibida. Abrir/guardar los cuadernos en la versión de CherryTree del equipo sigue siendo una comprobación operativa pendiente; validez XML no equivale a prueba de UI.
 
 ## Definition of Done del parcial
 

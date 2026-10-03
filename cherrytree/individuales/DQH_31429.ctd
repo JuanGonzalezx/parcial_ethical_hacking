@@ -1,67 +1,68 @@
 <?xml version='1.0' encoding='utf-8'?>
 <cherrytree>
-  <node unique_id="30001" name="MnzHack - DC-1 - DQH" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-    <rich_text>Daniel Quintero Hurtado | 31429
-Cuaderno individual. Inicio del proyecto: 2026-10-03. Entrega: 2026-10-08.
-PLANTILLA SIN RESULTADOS. Guardar evidencia propia; no usar soluciones de DC-1. Fechas de nodos son metadatos de plantilla, no de pruebas.</rich_text>
-    <node unique_id="30002" name="00 - Control y alcance" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>Completar docs/02-alcance-roe.md.
-Instancia / snapshot / IP atacante / IP objetivo / red / interfaz: PENDIENTE.
-Fecha/hora real con -05:00 en cada sesión.
-Cada autor edita únicamente su cuaderno. No mezclar laboratorios.</rich_text>
+  <node unique_id="30001" name="MnzHack · DC-1 · DQH · 31429" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
+    <rich_text>Daniel Quintero Hurtado · 31429
+Estructura basada en Jaime. Sin pruebas propias incorporadas. Consultar docs/revision-cherrytree-2026-10-03.md para avances de otros autores.</rich_text>
+    <node unique_id="30002" name="00 Control documental" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>Identidad del autor, instancia, fuentes, estado y próximos pasos.</rich_text>
     </node>
-    <node unique_id="30003" name="01 - Pre-Engagement" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>PENDIENTE DE EVIDENCIA PROPIA
-
-Alcance real, modalidad, exclusiones, RoE y arquitectura. Completar docs/02-alcance-roe.md con evidencia del laboratorio.
-
-Sesión / fecha / EV / observación / interpretación / siguiente paso / revisor:</rich_text>
+    <node unique_id="30003" name="01 Pre-Engagement" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>Completar alcance, exclusiones, clasificación justificada, reglas y arquitectura. No extrapolar IP ni servicios entre instancias.</rich_text>
+      <node unique_id="30004" name="Alcance" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+        <rich_text>PENDIENTE de datos propios. Consultar docs/02-alcance-roe.md; no copiar IP ajena como propia.</rich_text>
+      </node>
+      <node unique_id="30005" name="Rules of Engagement" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+        <rich_text>PENDIENTE de datos propios. Consultar docs/02-alcance-roe.md; no copiar IP ajena como propia.</rich_text>
+      </node>
+      <node unique_id="30006" name="Clasificación" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+        <rich_text>PENDIENTE de datos propios. Consultar docs/02-alcance-roe.md; no copiar IP ajena como propia.</rich_text>
+      </node>
     </node>
-    <node unique_id="30004" name="02 - Intelligence Gathering" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>PENDIENTE DE EVIDENCIA PROPIA
-
-Descubrimiento de IP e identidad, conectividad, TCP/UDP pertinente, servicios/versiones, tecnologías, directorios, usuarios y recursos. Interpretar cada resultado y registrar decisión siguiente.
-
-Sesión / fecha / EV / observación / interpretación / siguiente paso / revisor:</rich_text>
+    <node unique_id="30007" name="02 Intelligence Gathering" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>Documentar descubrimiento, conectividad, escaneo de puertos y versiones con captura, comando, interpretación y decisión siguiente.</rich_text>
+      <node unique_id="30008" name="Descubrimiento de host" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+        <rich_text>PENDIENTE de ejecución/evidencia propia.</rich_text>
+      </node>
+      <node unique_id="30009" name="Escaneo de puertos" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+        <rich_text>PENDIENTE de ejecución/evidencia propia.</rich_text>
+      </node>
+      <node unique_id="30010" name="Escaneo de servicios" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+        <rich_text>PENDIENTE de ejecución/evidencia propia.</rich_text>
+      </node>
     </node>
-    <node unique_id="30005" name="03 - Threat Modeling" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>PENDIENTE DE EVIDENCIA PROPIA
-
-Construir tabla: activo | EV | superficie/servicio | hipótesis | precondiciones | impacto potencial | prioridad y razón | prueba TEST. Solo usar servicios observados; separar amenazas hipotéticas de hallazgos.
-
-Sesión / fecha / EV / observación / interpretación / siguiente paso / revisor:</rich_text>
+    <node unique_id="30011" name="03 Enumeración" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>Profundizar por servicio observado. Distinguir resultado del scanner de validación técnica y conservar errores.</rich_text>
+      <node unique_id="30012" name="Servicios observados" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+        <rich_text>Crear un nodo por servicio realmente observado en la instancia propia.</rich_text>
+      </node>
     </node>
-    <node unique_id="30006" name="04 - Vulnerability Analysis" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>PENDIENTE DE EVIDENCIA PROPIA
-
-Investigar fuentes primarias a partir de versiones/comportamientos observados; validar y descartar falsos positivos. Enlazar fichas PT, CVE/CWE/CVSS aplicables y justificar estado.
-
-Sesión / fecha / EV / observación / interpretación / siguiente paso / revisor:</rich_text>
+    <node unique_id="30013" name="04 Threat Modeling" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>Activo → servicio observado → hipótesis → precondiciones → prioridad → prueba propuesta. Las hipótesis no son vulnerabilidades confirmadas.</rich_text>
     </node>
-    <node unique_id="30007" name="05 - Exploitation" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>PENDIENTE DE EVIDENCIA PROPIA
-
-Relacionar cada prueba con PT, razón de vulnerabilidad, técnica/exploit y fuente, configuración y parámetros, resultado y privilegios. Demostrar identidad del objetivo y documentar intentos fallidos.
-
-Sesión / fecha / EV / observación / interpretación / siguiente paso / revisor:</rich_text>
+    <node unique_id="30014" name="05 Vulnerability Analysis" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>Investigar fuentes técnicas permitidas y validar cada indicio. Registrar PT-NNN solo con ficha y evidencia; no asignar CVE o severidad por un banner.</rich_text>
     </node>
-    <node unique_id="30008" name="06 - Post-Exploitation" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>PENDIENTE DE EVIDENCIA PROPIA
-
-Usuarios/grupos, sudo, SUID/SGID/capabilities, cron/procesos, permisos, configuraciones/credenciales, hashes/claves/historial pertinentes, kernel y reutilización de contraseñas dentro del alcance. Documentar mecanismo de escalamiento, privilegios e identidad finales o máximo acceso logrado.
-
-Sesión / fecha / EV / observación / interpretación / siguiente paso / revisor:</rich_text>
+    <node unique_id="30015" name="06 Exploitation" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>PENDIENTE. Relacionar con PT, técnica, parámetros, precondiciones y resultado real. Demostrar identidad del objetivo y nivel de acceso.</rich_text>
     </node>
-    <node unique_id="30009" name="07 - Reporting" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>PENDIENTE DE EVIDENCIA PROPIA
-
-Integrar las evidencias en los 25 apartados, diagrama propio de cadena real, impacto y remediaciones. Revisar PDF y defensa con docs/04-defensa-y-entrega.md.
-
-Sesión / fecha / EV / observación / interpretación / siguiente paso / revisor:</rich_text>
+    <node unique_id="30016" name="07 Post-Exploitation" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>PENDIENTE. Enumeración local de usuarios, permisos, procesos y configuraciones dentro del alcance; registrar limitaciones.</rich_text>
     </node>
-    <node unique_id="30010" name="08 - Plantillas para duplicar" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>Duplicar un nodo para cada registro. Sustituir marcadores y conservar intentos fallidos. Los IDs de evidencia usan el alias del autor; los PT se coordinan en el índice común.</rich_text>
-      <node unique_id="30011" name="Sesión - PLANTILLA" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
+    <node unique_id="30017" name="08 Escalamiento" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>PENDIENTE. Explicar mecanismo, evidencia previa, resultado e identidad/privilegios posteriores. No afirmar root sin prueba.</rich_text>
+    </node>
+    <node unique_id="30018" name="09 Proof of Compromise" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>PENDIENTE. Usuario, privilegios y hostname del objetivo; documentar máximo acceso realmente logrado.</rich_text>
+    </node>
+    <node unique_id="30019" name="10 Evidencias (capturas sueltas)" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>Índice y capturas auxiliares. Las figuras interpretadas se mantienen en su fase. IDs EV estables; la numeración final se asigna al maquetar.</rich_text>
+    </node>
+    <node unique_id="30020" name="11 Reporting y defensa" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>Integrar resultados en los 25 apartados de informe/INFORME.md. Todas las evidencias necesarias deben quedar dentro del único PDF; defensa compartida.</rich_text>
+    </node>
+    <node unique_id="30021" name="12 Plantillas de trabajo" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
+      <rich_text>Duplicar la plantilla que corresponda; registrar fecha real, instancia, comandos, resultados y límites. No usar fechas de edición del cuaderno como fecha de prueba.</rich_text>
+      <node unique_id="30022" name="SESION · PLANTILLA" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
         <rich_text># SES-ALIAS-AAAAMMDD-NN · Título
 
 - Autor / código:
@@ -84,7 +85,7 @@ Qué se observó, qué demuestra, qué no permite concluir, errores e intentos f
 IDs EV y rutas originales; posible PT asociado. Próximo paso y razón. Restauraciones, limpieza y limitaciones. Revisor y fecha si corresponde.
 </rich_text>
       </node>
-      <node unique_id="30012" name="Evidencia - PLANTILLA" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
+      <node unique_id="30023" name="EVIDENCIA · PLANTILLA" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
         <rich_text># EV-ALIAS-NNN · Título de evidencia
 
 - Autor / fecha ISO 8601 con zona / instancia:
@@ -102,7 +103,7 @@ IDs EV y rutas originales; posible PT asociado. Próximo paso y razón. Restaura
 La captura debe leerse a tamaño normal en el PDF. Conservar contexto de máquina y salida relevante. El hash comprueba integridad posterior al registro, no autoría ni veracidad por sí solo.
 </rich_text>
       </node>
-      <node unique_id="30013" name="Hallazgo - PLANTILLA" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
+      <node unique_id="30024" name="HALLAZGO · PLANTILLA" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
         <rich_text># PT-NNN · Nombre del hallazgo
 
 - Estado: posible | en-validacion | confirmado | descartado (elegir uno)
@@ -146,7 +147,7 @@ Fuentes técnicas primarias: URL, título, fecha de consulta y afirmación suste
 Revisor, fecha, observaciones resueltas y pendientes. Relación con otras fichas/cadena; no duplicar la misma causa como hallazgos distintos sin justificación.
 </rich_text>
       </node>
-      <node unique_id="30014" name="Prueba - PLANTILLA" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
+      <node unique_id="30025" name="PRUEBA · PLANTILLA" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791047778">
         <rich_text># TEST-ALIAS-NNN · Título
 
 Estado: propuesta | lista | ejecutada | revisada | cerrada (elegir uno).
@@ -166,13 +167,6 @@ Estado: propuesta | lista | ejecutada | revisada | cerrada (elegir uno).
 Sesión/EV/PT, resultado real, desviaciones, interpretación, revisión y próxima decisión. No llenar esta sección con resultados esperados.
 </rich_text>
       </node>
-    </node>
-    <node unique_id="30015" name="09 - Referencias y dudas" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>Fuentes técnicas generales y primarias: título, URL, fecha, propósito. No usar walkthroughs de DC-1.
-Registrar dudas, límites, pruebas descartadas y preguntas para defensa.</rich_text>
-    </node>
-    <node unique_id="30016" name="10 - Checklist de cierre" prog_lang="custom-colors" tags="MnzHack DC-1" readonly="0" nosearch_me="0" nosearch_ch="0" is_bold="0" foreground="" ts_creation="1791003600" ts_lastsave="1791003600">
-      <rich_text>Guardar originales e índice EV. Revisar fichas PT con otro compañero. Promover resultados al informe. Verificar legibilidad, trazabilidad y limpieza. Todo el equipo debe explicar la cadena completa.</rich_text>
     </node>
   </node>
 </cherrytree>

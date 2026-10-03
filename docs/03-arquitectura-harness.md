@@ -19,7 +19,7 @@ flowchart LR
 | Requisito académico | PDF del docente; análisis con páginas en docs |
 | Plan y tareas | specs/001-documentacion/ |
 | Estado actual y próxima acción | docs/estado.md |
-| Nota de campo | Cuaderno del autor; una sola persona lo edita |
+| Nota de campo | Cuaderno activo según cherrytree/cuadernos.json; una sola persona lo edita |
 | Evidencia original | evidencias/originales/ y su SHA-256 |
 | Metadatos de evidencia | evidencias/indice.csv |
 | Hallazgo revisado | hallazgos/PT-NNN.md e indice.csv |
@@ -35,7 +35,7 @@ La consolidación CherryTree reúne notas; el informe es la fuente editorial fin
 4. **Al integrar:** PT y EV enlazados; figura legible con explicación y remediación verificable.
 5. **Al entregar:** PDF único, 25 apartados, cero pendientes injustificados, referencias y defensa compartida.
 
-`python3 scripts/validar.py` revisa XML de los cuadernos, índices, IDs, rutas, hashes, referencias de hallazgos y número de secciones del informe. Los registros vacíos son válidos durante el arranque y se anuncian como pendientes. No verifica veracidad, CVSS, legibilidad ni contenido incrustado del PDF: esas revisiones son humanas.
+`python3 scripts/validar.py` revisa XML/SQLite de los cuadernos activos, índices, IDs, rutas, hashes, referencias de hallazgos y número de secciones del informe. Los registros vacíos son válidos durante el arranque y se anuncian como pendientes. No verifica veracidad, CVSS, legibilidad ni contenido incrustado del PDF: esas revisiones son humanas.
 
 ## Colaboración Git
 

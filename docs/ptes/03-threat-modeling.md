@@ -1,14 +1,9 @@
 # Threat Modeling
 
-Estado: pendiente de evidencia propia.
+Estado: avance parcial revisado documentalmente el 2026-10-03.
 
-Construir tabla: activo | EV | superficie/servicio | hipótesis | precondiciones | impacto potencial | prioridad y razón | prueba TEST. Solo usar servicios observados; separar amenazas hipotéticas de hallazgos.
+Prioridad propuesta: HTTP por superficie de aplicación observada; SSH y RPC requieren caracterización. Hipótesis a formular a partir de versiones y comportamiento propios, con referencias primarias y criterio de descarte. No hay vulnerabilidad específica confirmada. Jaime debe respaldar el inventario declarado con sus propias salidas.
 
-## Registro de avance
+## Pendientes
 
-| Sesión / TEST | Instancia | EV | PT si aplica | Observación | Interpretación y siguiente paso | Revisor |
-|---|---|---|---|---|---|---|
-
-## Cobertura, límites y cierre
-
-PENDIENTE. Registrar lo intentado, lo no probado y por qué. No marcar completa esta fase solo por disponer de esta plantilla.
+Completar evidencia faltante, fechas y revisión cruzada. Registrar pruebas propuestas desde plantillas/PRUEBA.md y resultados reales por sesión. La revisión actual no reproduce las pruebas.

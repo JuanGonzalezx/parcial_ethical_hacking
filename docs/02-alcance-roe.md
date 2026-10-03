@@ -34,3 +34,12 @@ Detener si cambia la IP o identidad sin verificar, hay dudas sobre el adaptador,
 Registrar fecha ISO 8601 con `-05:00`, autor e instancia de cada ejecución. Originales conservados; copias redactadas para compartir cuando proceda. Revisar secretos antes de Git. Evidencias sensibles locales en `private/`, con respaldo privado gestionado por el equipo; no confundir .gitignore con cifrado. No incorporar credenciales ajenas al laboratorio.
 
 Al cerrar: detener listeners/procesos del ejercicio, registrar cambios y retirar artefactos temporales propios cuando corresponda; documentar restauración de snapshot. No afirmar limpieza ni remediación sin comprobarla.
+
+## Inventario recibido el 2026-10-03
+
+| Instancia documental | Atacante | Objetivo | Red e identidad | Estado |
+|---|---|---|---|---|
+| LAB-JACD | 192.168.18.129, ens36 | 192.168.18.130; MAC 00:0c:29:55:ea:9d | Host-Only VMnet11 declarado por Jaime | ARP/ping observados; falta captura del hipervisor, snapshot y salida Nmap |
+| LAB-EJVA | 192.168.81.129/24, ens36; ens33 192.168.80.128/24 | 192.168.81.130; MAC 00:0c:29:79:c1:61 | Aislamiento por comprobar | ARP, Nmap y web observados; falta configuración de red y snapshot |
+
+Black Box es la modalidad declarada por Jaime, pendiente revisión con el conocimiento previo real. La ventana 2026-10-03 11:28 consta en sus RoE; no sustituye fecha de cada EV. No se ejecutaron nuevas pruebas durante esta integración documental.
