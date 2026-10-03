@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.pyc
+/tmp/
+/private/
+*.ctb~
+*.ctd~
+*.ctb-journal
+*.ctb-wal
+*.ctb-shm
+*.ctb.bak
+*.ctd.bak

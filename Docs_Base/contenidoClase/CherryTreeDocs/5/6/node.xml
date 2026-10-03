@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <node unique_id="6" master_id="0" name="Enumeration" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1790810648" ts_lastsave="1790810865">
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+gobuster --help
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+
+gobuster dir -u </rich_text>
+    <rich_text link="webs http://192.168.18.128/">http://192.168.18.128/</rich_text>
+    <rich_text> -w /usr/share/wordlists/dirb/common.txt
+
+http://192.168.18.128/secret/
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+Después cargando la carga:
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <encoded_png char_offset="0" justification="left" link="" sha256sum="e2f80841040bbba2d65757c2e0d94d14601048742d0c5d4260a09e32d210dea6"/>
+    <encoded_png char_offset="20" justification="left" link="" sha256sum="bb7f5a07661886b0c63f3e38c38ecb0a15b7d40c90854527d2452afeae3a2998"/>
+    <encoded_png char_offset="135" justification="left" link="" sha256sum="723927ca02949b78d1085faaba4bcdd2a8d2312534ffa604f26bf8133cd05a00"/>
+    <encoded_png char_offset="139" justification="left" link="" sha256sum="f07af09d1bd79ed320144bad6921d55c24e17abaa8c15e482c27693c9e3b6de6"/>
+    <encoded_png char_offset="142" justification="left" link="" sha256sum="4345c02527c069ec51f76e187dfde986ce245f65af66897c1c4c1588c770a097"/>
+    <encoded_png char_offset="145" justification="left" link="" sha256sum="67e1f912c74b3ca8196d0eac25720a72c08b308c6938646eca05cfeaa30cd6b6"/>
+    <encoded_png char_offset="176" justification="left" link="" sha256sum="496c157871da4c283e4df8fd40c1ec3610bca967e57e7c5a7e6a5b2192489913"/>
+    <encoded_png char_offset="179" justification="left" link="" sha256sum="4349acd29c2a80a3da09e25a20a9641b8338e4b8067ab277479cb6278b5a4912"/>
+    <encoded_png char_offset="182" justification="left" link="" sha256sum="80a4a70c004b1190569e7957f250e724677cdb7b2b69515107272cbc902bb8ca"/>
+    <encoded_png char_offset="185" justification="left" link="" sha256sum="34e6f4519e810e10e18cfa37f2e543e61e481b3462414fa1cfd4c1a2c0da06d0"/>
+    <encoded_png char_offset="188" justification="left" link="" sha256sum="ed687da743c29cc8f0c2d4cfbc3fcdd6ed793e972c9ff75ccec3b33c22b24eba"/>
+    <encoded_png char_offset="191" justification="left" link="" sha256sum="177a24b4d05b5caef30007c47b983445240768ccbf631ab023b75cf97e7b749b"/>
+  </node>
+</cherrytree>
