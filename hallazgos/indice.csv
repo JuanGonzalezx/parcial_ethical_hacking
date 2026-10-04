@@ -1,1 +1,5 @@
 id,titulo,estado,autor,revisor,archivo,evidencia_ids,severidad
+PT-001,Drupalgeddon SQLi en Drupal Core (CVE-2014-3704),confirmado,JACD,pendiente,hallazgos/PT-001.md,EV-JACD-003,9.8
+PT-002,Permisos SUID indebidos en /usr/bin/find,confirmado,JACD,pendiente,hallazgos/PT-002.md,EV-JACD-004,7.8
+PT-003,Credenciales Drupal con hash debil (admin),confirmado,JACD,pendiente,hallazgos/PT-003.md,EV-JACD-005,7.5
+PT-004,RCE via modulo PHP filter de Drupal,confirmado,JACD,pendiente,hallazgos/PT-004.md,EV-JACD-006,9.1
