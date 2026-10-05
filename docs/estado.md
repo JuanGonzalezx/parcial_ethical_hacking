@@ -10,9 +10,9 @@ Actualizado: 2026-10-03 · incorporados cuadernos de Jaime y Eduardo · reconoci
 | Jaime | ARP y ping con dos capturas; puertos declarados sin salida | Incorporar Nmap y evidencia de configuración Host-Only |
 | Eduardo | 11 capturas: red, Nmap, Gobuster, HTTP y WhatWeb | Incorporar salidas originales y validar hipótesis específicas |
 | Evidencias | 13 PNG originales extraídos, fichas e índice con hashes | Completar horas faltantes y revisión cruzada |
-| Hallazgos confirmados | Ninguno respaldado todavía | No equiparar banners/rutas con vulnerabilidades |
+| Hallazgos confirmados | 2 confirmados por DQH (SSH y SUID) | Completar validación cruzada |
 | CherryTree | 2 CTB actualizados y 2 CTD alineados; originales respaldados | Comprobar apertura/guardado en la aplicación del equipo |
-| Informe | Reconocimiento y enumeración iniciales integrados | Completar fases pendientes y maquetación final |
+| Informe | Fase de explotación y escalada añadida | Finalizar limpieza y cierre |
 | Entrega | Jueves 2026-10-08 | Confirmar hora y canal |
 
 ## Próxima sesión

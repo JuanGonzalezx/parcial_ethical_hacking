@@ -4,4 +4,6 @@ PT-002,Permisos SUID indebidos en /usr/bin/find,confirmado,JACD,pendiente,hallaz
 PT-003,Credenciales Drupal con hash debil (admin),confirmado,JACD,pendiente,hallazgos/PT-003.md,EV-JACD-005,7.5
 PT-004,RCE via modulo PHP filter de Drupal,confirmado,JACD,pendiente,hallazgos/PT-004.md,EV-JACD-006,9.1
 PT-005,Posible ejecución remota de código en Drupal 7 (Drupalgeddon 2),posible,DQH,pendiente,hallazgos/PT-005.md,,9.8
-PT-006,Exposición de archivo de configuración (web.config),en-validacion,DQH,pendiente,hallazgos/PT-007.md,,3.7
+PT-006,Exposición de archivo de configuración (web.config),en-validacion,DQH,pendiente,hallazgos/PT-006.md,,3.7
+PT-007,Credenciales débiles de SSH para el usuario flag4,confirmado,DQH,pendiente,hallazgos/PT-007.md,EV-DQH-002,9.1
+PT-008,Escalada de privilegios local mediante binario SUID (find),confirmado,DQH,pendiente,hallazgos/PT-008.md,EV-DQH-004,7.8
