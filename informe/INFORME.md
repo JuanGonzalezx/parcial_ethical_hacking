@@ -94,7 +94,9 @@ No hay fichas PT confirmadas en esta revisión. Los resultados de puertos y tecn
 
 ## 16. Explotación
 
-PENDIENTE: redactar con resultados propios, EV/PT, figuras numeradas e interpretación. Explicar cobertura y limitaciones sin inventar resultados.
+Se detectó que el servicio SSH en el puerto 22 aceptaba autenticación por contraseña. Mediante el módulo auxiliar de Metasploit `scanner/ssh/ssh_enumusers`, se identificó la existencia del usuario `flag4`. Posteriormente, un ataque de diccionario utilizando Hydra (`rockyou.txt`) reveló la contraseña `orange` para dicho usuario (EV-DQH-001, EV-DQH-002).
+
+Esto resultó en el hallazgo PT-007 (Credenciales débiles de SSH). El acceso inicial se confirmó al conectar exitosamente por SSH y capturar el archivo `flag4.txt` (EV-DQH-003).
 
 ## 17. Post-Exploitation
 
@@ -102,7 +104,9 @@ PENDIENTE: redactar con resultados propios, EV/PT, figuras numeradas e interpret
 
 ## 18. Escalamiento de privilegios
 
-PENDIENTE: redactar con resultados propios, EV/PT, figuras numeradas e interpretación. Explicar cobertura y limitaciones sin inventar resultados.
+Una vez obtenido el acceso como usuario sin privilegios (`flag4`), se realizó una enumeración local identificando binarios con el bit SUID activo mediante `find / -perm -4000 -type f 2>/dev/null`. Se localizó `/usr/bin/find`, un ejecutable que permite la ejecución de comandos de sistema con los privilegios de su propietario (root) mediante el argumento `-exec` (EV-DQH-004).
+
+Al ejecutar `/usr/bin/find /etc/passwd -exec /bin/bash -p \;`, se instanció una consola Bash preservando los privilegios efectivos de superusuario (`euid=0`). Esto compromete integralmente la máquina (PT-008) permitiendo el acceso irrestricto, validado con la captura de `thefinalflag.txt` en `/root` (EV-DQH-005).
 
 ## 19. Cadena de ataque
 
@@ -287,3 +291,53 @@ Instancia: LAB-EJVA. Autor: EJVA. Fecha: no-registrada.
 **Observado:** WhatWeb devuelve HTTP 200, Apache 2.2.22, Drupal 7 y PHP 5.4.45-0+deb7u14 entre sus identificadores.
 
 **Interpretación y límites:** Fingerprinting consistente con Nmap para HTTP. Versiones reportadas, no validación de CVE; registrar versión de WhatWeb y obtener respuesta original si se conserva.
+
+### EV-DQH-001 · Enumeración de usuarios SSH con nmap y msfconsole
+
+Instancia: LAB-DQH. Autor: DQH. Fecha: 2026-10-04.
+
+**Acción:** `nmap --script ssh-auth-methods` y `scanner/ssh/ssh_enumusers` en msfconsole.
+
+**Observado:** Identificación de autenticación de contraseña e identificación de usuario flag4.
+
+**Interpretación y límites:** Confirma superficie de ataque para fuerza bruta.
+
+### EV-DQH-002 · Ataque de fuerza bruta SSH con Hydra
+
+Instancia: LAB-DQH. Autor: DQH. Fecha: 2026-10-04.
+
+**Acción:** `hydra -l flag4 -P /usr/share/wordlists/rockyou.txt ssh://192.168.18.130`
+
+**Observado:** Se halló la contraseña `orange` para `flag4`.
+
+**Interpretación y límites:** Permite el acceso SSH local. Confirma la vulnerabilidad PT-007.
+
+### EV-DQH-003 · Acceso inicial exitoso y lectura de flag4.txt
+
+Instancia: LAB-DQH. Autor: DQH. Fecha: no-registrada.
+
+**Acción:** Login SSH y `cat flag4.txt`.
+
+**Observado:** Primera bandera y permisos de `flag4`.
+
+**Interpretación y límites:** Compromiso inicial completado.
+
+### EV-DQH-004 · Búsqueda y explotación de SUID find
+
+Instancia: LAB-DQH. Autor: DQH. Fecha: no-registrada.
+
+**Acción:** `find / -perm -4000 -type f` seguido de `/usr/bin/find /etc/passwd -exec /bin/bash -p \;`
+
+**Observado:** Binario `find` listado como SUID. Posteriormente spawnea shell `bash-4.2#`.
+
+**Interpretación y límites:** Confirma la vulnerabilidad PT-008.
+
+### EV-DQH-005 · Consola root y final flag
+
+Instancia: LAB-DQH. Autor: DQH. Fecha: no-registrada.
+
+**Acción:** `id` y `cat thefinalflag.txt`.
+
+**Observado:** euid=0(root) y lectura de la bandera final.
+
+**Interpretación y límites:** Escalada de privilegios validada y completa.
