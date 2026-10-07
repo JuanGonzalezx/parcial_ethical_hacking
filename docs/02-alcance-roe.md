@@ -65,3 +65,9 @@ La captura anterior EV-JDOG-001 contiene el comando nmap -sV -sC -p- 192.168.128
 Inventario TCP observado; sin vulnerabilidad, CVE ni CVSS confirmados. La familia Drupal 7 está reportada, pero no su versión menor. Falta corroborar identidad DC-1 y aislamiento mediante configuración UTM, y conservar salida original en texto. No hay prueba de shell ni escalamiento.
 
 La salida final resuelve el pendiente del escaneo; no resuelve identidad ni aislamiento. Continúa TEST-JDOG-002 como propuesta.
+
+## Reconciliación de instancias al 7 de octubre
+
+LAB-DQH usa atacante 192.168.18.129 (ens36) y objetivo 192.168.18.130 con MAC 00:0c:29:45:c1:6e, respaldado por EV-DQH-001/003/014. Aunque comparte IP con LAB-JACD, la MAC de Jaime es 00:0c:29:55:ea:9d. Mantener relatos separados salvo demostración de identidad/cambio de snapshot. El hostname DC-1 aparece en sesiones de ambos; no individualiza por sí solo la VM. UTM de Juan y VMware de los compañeros necesitan capturas de aislamiento.
+
+Las afirmaciones anteriores “sin acceso” describen el estado histórico de LAB-JDOG o las primeras capturas, no el estado actual del equipo. Las cadenas hasta EUID root de Jaime y Daniel se detallan en la revisión del 7 de octubre.

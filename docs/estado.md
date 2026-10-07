@@ -1,25 +1,18 @@
 # Estado del trabajo
 
-Actualizado: 2026-10-03 · incorporados cuadernos de Jaime y Eduardo y primera evidencia de Juan · reconocimiento/enumeración parciales.
+Actualizado: **2026-10-07**. Rebase resuelto; revisión de evidencia y organización del informe en curso. Entrega jueves 8, hora/canal por confirmar.
 
-| Frente | Estado | Próxima acción |
+| Frente | Estado comprobado | Próximo paso |
 |---|---|---|
-| Estructura común | Adaptada al árbol de Jaime para los cuatro | Continuar en archivos activos de cherrytree/cuadernos.json |
-| Nombre MnzHack / Mzlhack | Por aclarar | Confirmar nombre de entrega |
-| Laboratorios | LAB-JACD .18.130, LAB-EJVA .81.130 y LAB-JDOG .128.4 candidato, separados | Confirmar imagen, snapshot, identidad y aislamiento de cada uno |
-| Juan | UTM/Parrot reportados; ping y Nmap final a .128.4: 22/80/111/47118 TCP, EV-JDOG-001/002 | Confirmar MAC/VM y aislamiento; preservar texto de Nmap y seguir TEST-JDOG-002 |
-| Jaime | ARP y ping con dos capturas; puertos declarados sin salida | Incorporar Nmap y evidencia de configuración Host-Only |
-| Eduardo | 11 capturas: red, Nmap, Gobuster, HTTP y WhatWeb | Incorporar salidas originales y validar hipótesis específicas |
-| Evidencias | 20 registros: Jaime, Eduardo, Daniel y Juan | Revisar hashes, fechas y cobertura |
-| Hallazgos | Daniel reporta SSH y SUID confirmados; Jaime documenta cuatro fichas en CherryTree | Revisar capturas, extraer fichas faltantes y completar revisión cruzada |
-| CherryTree | 2 CTB actualizados y 2 CTD alineados; originales respaldados | Comprobar apertura/guardado en la aplicación del equipo |
-| Informe | Fase de explotación y escalada añadida | Finalizar limpieza y cierre |
-| Entrega | Jueves 2026-10-08 | Confirmar hora y canal |
+| Git | Rebase completo, commit local reaplicado 242a840; sin push | Revisar y guardar cambios documentales de esta revisión |
+| Evidencias | 47 registros con archivos y SHA-256; 27 incorporaciones de la revisión | Completar fechas faltantes y numeración final de figuras |
+| Jaime | Shell www-data, EUID root, recuperación de contraseña y PHP autenticado en capturas | Revisión humana de PT-001 a 004, cronología y limpieza |
+| Daniel | Acceso SSH y EUID root demostrados; referencias de imágenes corregidas | Revisión humana PT-007/008 y CVSS |
+| Eduardo | Reconocimiento evidenciado; sesión adicional 5 octubre solo reportada en CTB | Aportar capturas de acceso/escalamiento o conservar como pendiente |
+| Juan | Reconocimiento UTM evidenciado | Integración, alcance y revisión cruzada |
+| Hallazgos | 8 fichas: 1 posible y 7 en-validacion; seis resultados antes reportados confirmados requieren revisión cruzada | No confundir resultado demostrado con aprobación editorial pendiente |
+| Duplicados | PT-002 y PT-008: misma causa SUID en dos instancias | Consolidar conteo por causa conservando autoría e IDs |
+| Informe | 25 apartados; fichas y capturas integradas en fuente | Completar pendientes, maquetar y revisar PDF entero |
+| Laboratorio | Cuatro instancias documentales; Jaime/Daniel comparten IP pero no MAC | Adjuntar configuración de aislamiento y snapshots |
 
-## Próxima sesión
-
-Leer `docs/revision-cherrytree-2026-10-03.md` y los nodos de revisión. No mezclar puertos, IP ni capturas entre laboratorios. Usar evidencia registrada para formular pruebas propias; confirmar/descartar cada hipótesis antes de asignar severidad, CVE o CVSS.
-
-## Propuesta de responsables (por acordar)
-
-Juan: integración y rúbrica. Jaime: reconocimiento e inventario. Eduardo: enumeración y evidencias. Daniel: investigación permitida y revisión de riesgo/remediación. Todos participan en validación y defensa; ningún rol limita la comprensión del ataque completo.
+Plan y correcciones concretas: [revisión de cierre](revision-2026-10-07/REVISION.md). No hay PDF final validado todavía. No se realizaron nuevas pruebas activas en esta revisión.

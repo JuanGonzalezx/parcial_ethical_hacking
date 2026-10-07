@@ -1,0 +1,221 @@
+{
+  "cuaderno_jaime_sha256": "0550e8dcf379237409a3a50f2acba66018ac203038294eba976f86a52d460bb7",
+  "archivos": [
+    {
+      "id": "EV-JACD-003",
+      "origen": "tmp/revision-2026-10-07/jaime-07-n15-o239.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-003.png",
+      "sha256": "54897a0089fede7bf799de82dc4321e0f97117f2ccf7117923bfec4bccc418f6",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-004",
+      "origen": "tmp/revision-2026-10-07/jaime-17-n17-o2646.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-004.png",
+      "sha256": "814d5f8e74dfb1a7d8130907522797f50173e40aae0eba4b0f3c309ce69fbc9c",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-005",
+      "origen": "tmp/revision-2026-10-07/jaime-29-n108-o8912.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-005.png",
+      "sha256": "019d621ba7879726f4e4f1d82d31a1448f1a90d7779534e0387adbdfb4f42a79",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-006",
+      "origen": "tmp/revision-2026-10-07/jaime-34-n108-o12173.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-006.png",
+      "sha256": "e37317e61b4ddd5192ce2936791cdf53b18ecac771bcbf4f215a2155bb822029",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-007",
+      "origen": "tmp/revision-2026-10-07/jaime-15-n17-o826.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-007.png",
+      "sha256": "6dedcd5d41e15df3486e54964009cdb97e2e44435ba272474280e6dbf95d6a1a",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-008",
+      "origen": "tmp/revision-2026-10-07/jaime-16-n17-o2112.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-008.png",
+      "sha256": "abbe03a1311bb3ea2a2675ea39bb36e647baa82dbf09c1f2d155eae3d7dbb946",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-009",
+      "origen": "tmp/revision-2026-10-07/jaime-11-n16-o246.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-009.png",
+      "sha256": "43d18e46d5b95985179106731532bf6fc08f21b422d8ce3edf1af79f459d7444",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-010",
+      "origen": "tmp/revision-2026-10-07/jaime-19-n18-o933.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-010.png",
+      "sha256": "b98d9eab3693f2f5acd01d4eaf94567ba29c3817faa8a3389ac7fc83aa04d06a",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-011",
+      "origen": "tmp/revision-2026-10-07/jaime-32-n108-o11744.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-011.png",
+      "sha256": "4fd5e9201a4fa235689c585d598b52e67a6844d64dda9d0f735bfda11f9efd01",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-012",
+      "origen": "tmp/revision-2026-10-07/jaime-33-n108-o12111.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-012.png",
+      "sha256": "8ca555528ee0e5a91b13f9566b5c2578f862c9b8714e369ba01e0a208d026d2c",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-013",
+      "origen": "tmp/revision-2026-10-07/jaime-31-n108-o9024.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-013.png",
+      "sha256": "457cff8e26e6d20914a9430d5f0884dab12b2d73c7725a2f9d0dc876d25731d2",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-014",
+      "origen": "tmp/revision-2026-10-07/jaime-28-n108-o3421.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-014.png",
+      "sha256": "4a709d07cb8945757d44c8088bf536052a5ea43e847a1d0a632030e755561c13",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-015",
+      "origen": "tmp/revision-2026-10-07/jaime-04-n9-o139.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-015.png",
+      "sha256": "cf74284976f6c6553245737ab03df1ddfe81fbcbfcad94afa3e23bb167d8a700",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-016",
+      "origen": "tmp/revision-2026-10-07/jaime-05-n10-o167.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-016.png",
+      "sha256": "f00edd664d3e46b0c3cca24a2d11705ebb4ff0d5d5f69dd61ac34310ae63b7d5",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-017",
+      "origen": "tmp/revision-2026-10-07/jaime-06-n10-o170.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-017.png",
+      "sha256": "fd65a16fa5d21b0ad357e5e0a71795f156ce6d0f52a233e86683a65479f66cb5",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-018",
+      "origen": "tmp/revision-2026-10-07/jaime-20-n20-o102.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-018.png",
+      "sha256": "3f5bef9e985599772908c20f6c4a5f2666e87195729b125bd0057ed646c4cfed",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-019",
+      "origen": "tmp/revision-2026-10-07/jaime-13-n16-o1548.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-019.png",
+      "sha256": "2a7df9d88da314e7c17b60d89095823260cdc9e19f3bfa2c6169238fca15fc5a",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-JACD-020",
+      "origen": "tmp/revision-2026-10-07/jaime-23-n22-o135.png",
+      "destino": "evidencias/originales/JACD/EV-JACD-020.png",
+      "sha256": "8f58529b6fcd4747195a11992f8311e858f1f2c9bd36115d28fb43147ced0ad9",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-DQH-006",
+      "origen": "evidencias/originales/DQH/image copy 17.png",
+      "destino": "evidencias/originales/DQH/EV-DQH-006.png",
+      "sha256": "371ca7f6d4c0b7c30836a979383e52ae4d3bd81921ae2082652b69bc766ea056",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-DQH-007",
+      "origen": "evidencias/originales/DQH/image copy 18.png",
+      "destino": "evidencias/originales/DQH/EV-DQH-007.png",
+      "sha256": "dc194a62e7c0b6508fefd57f624031734c50809ac4cc15c3a19e6ba7ffc08396",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-DQH-008",
+      "origen": "evidencias/originales/DQH/image copy 20.png",
+      "destino": "evidencias/originales/DQH/EV-DQH-008.png",
+      "sha256": "91fe81bfa3a5019159d51d39e59bcfb702e9a826a6e3ddd80c08f49de0d574f3",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-DQH-009",
+      "origen": "evidencias/originales/DQH/image copy 21.png",
+      "destino": "evidencias/originales/DQH/EV-DQH-009.png",
+      "sha256": "459aff52700d1104877bca14bcd4ed28c23c0e141dd3c14d848ba06d2b09450a",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-DQH-010",
+      "origen": "evidencias/originales/DQH/image copy 22.png",
+      "destino": "evidencias/originales/DQH/EV-DQH-010.png",
+      "sha256": "d38617b1ce34465984dec1c541523359ebf501b1829809530339defc68cfa5d7",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-DQH-011",
+      "origen": "evidencias/originales/DQH/image copy 23.png",
+      "destino": "evidencias/originales/DQH/EV-DQH-011.png",
+      "sha256": "be0cc341fe289c2f62a47fe7ee1ac8604c48c35f3555b16320032745add107e4",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-DQH-012",
+      "origen": "evidencias/originales/DQH/image copy 24.png",
+      "destino": "evidencias/originales/DQH/EV-DQH-012.png",
+      "sha256": "f6d07ecae895ac050396cf4c5b61c197ccd056273921c7d357a6160c21e98efd",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-DQH-013",
+      "origen": "evidencias/originales/DQH/image copy 10.png",
+      "destino": "evidencias/originales/DQH/EV-DQH-013.png",
+      "sha256": "0d5cc2733eee1e1e9d7b80bef0931b66afdf8648e521fd1fc622cec7ac7fa153",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    },
+    {
+      "id": "EV-DQH-014",
+      "origen": "evidencias/originales/DQH/image copy 0.png",
+      "destino": "evidencias/originales/DQH/EV-DQH-014.png",
+      "sha256": "f4361227d46ddafc68284062034240a42ecd4b3e0e78783743ac02b764a543d6",
+      "fecha_integracion": "2026-10-07",
+      "metodo": "Copia exacta sin recodificar; imágenes Jaime extraídas del BLOB SQLite, nodo y offset indicados por el nombre intermedio."
+    }
+  ]
+}

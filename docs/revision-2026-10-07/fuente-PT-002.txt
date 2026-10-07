@@ -1,0 +1,62 @@
+ID: PT-002
+Nombre: Permisos SUID indebidos en /usr/bin/find
+Activo afectado: DC-1 (192.168.18.130, local)
+Servicio: Sistema de archivos local (binario SUID)
+Severidad: High (CVSS 7.8)
+Vector CVSS: AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+CVE: N/A (configuración del sistema, no vulnerabilidad de software)
+CWE-269: Improper Privilege Management
+CWE-732: Incorrect Permission Assignment for Critical Resource
+
+Descripción técnica:
+El binario /usr/bin/find tiene activado el bit SUID y pertenece a
+root. Find permite ejecutar comandos arbitrarios mediante su opción
+-exec. Combinado con SUID, cualquier usuario local puede ejecutar
+comandos con EUID root sin autenticación, escalando privilegios de
+forma trivial.
+
+La configuración correcta es que find NO tenga el bit SUID, ya que
+no lo requiere para su funcionamiento normal.
+
+Evidencia de existencia:
+- find / -perm -4000 listó /usr/bin/find entre los binarios SUID.
+- ls -la /usr/bin/find confirma -rwsr-xr-x 1 root root.
+- Explotación exitosa: creación de /tmp/rootbash con SUID root y
+  obtención de shell con euid=0(root).
+
+Estado: Confirmado.
+
+Procedimiento de reproducción:
+1. Desde una shell sin privilegios (www-data):
+   $ find /tmp -maxdepth 0 -exec cp /bin/bash /tmp/rootbash \;
+   $ find /tmp/rootbash -exec chmod +s {} \;
+2. Ejecutar la shell privilegiada:
+   $ /tmp/rootbash -p
+3. Verificar:
+   $ id
+   → uid=33(www-data) gid=33(www-data) euid=0(root)
+
+Impacto técnico:
+Cualquier usuario con acceso local al sistema (incluido www-data,
+obtenido por RCE en Drupal) puede escalar a root sin necesidad de
+credenciales ni de un exploit complejo. Compromiso total del host.
+
+Impacto para la organización:
+Un atacante que comprometa un servicio de bajo privilegio puede
+escalar al control absoluto del sistema operativo. Se compromete la
+confidencialidad de todos los datos (incluyendo hashes de /etc/shadow),
+la integridad de archivos de sistema y la disponibilidad del servidor.
+
+Recomendación:
+Eliminar el bit SUID del binario find:
+  # chmod u-s /usr/bin/find
+Auditar todos los binarios SUID del sistema y retirar el bit de
+aquellos que no lo requieran por diseño. Establecer una revisión
+periódica mediante herramientas como Lynis o un script propio que
+compare los SUID presentes con una línea base conocida.
+
+Referencias:
+- https://cwe.mitre.org/data/definitions/269.html
+- https://cwe.mitre.org/data/definitions/732.html
+- https://gtfobins.github.io/gtfobins/find/
+- https://attack.mitre.org/techniques/T1548/001/

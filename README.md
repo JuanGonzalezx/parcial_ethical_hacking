@@ -36,9 +36,11 @@ Trabajo: **3–8 de octubre de 2026**, zona America/Bogota. Entrega: jueves 8; h
 | `scripts/` | Controles documentales locales, sin escaneos |
 | `private/` | Material sensible local, excluido de Git; no es respaldo |
 
-## Estado inicial
+## Estado actual al 7 de octubre
 
-Se incorporaron los cuadernos de Jaime y Eduardo y las dos capturas de Juan: **15 capturas propias**, descubrimiento y enumeración inicial. Se distinguen LAB-JACD (192.168.18.130) y LAB-EJVA (192.168.81.130). No hay vulnerabilidades confirmadas ni acceso documentado. Consultar [revisión y pendientes](docs/revision-cherrytree-2026-10-03.md).
+Rebase resuelto. **47 evidencias registradas y ocho fichas de hallazgo**. Jaime y Daniel aportan capturas de acceso inicial y privilegio efectivo root en instancias distintas. Falta revisión cruzada, cierre de clasificaciones y PDF final. PT-002/PT-008 comparten causa; no equivalen a ocho vulnerabilidades únicas confirmadas.
+
+Comenzar por [revisión y plan de cierre](docs/revision-2026-10-07/REVISION.md) y [estado actual](docs/estado.md). Se conservaron los cuadernos y las imágenes originales.
 
 La tabla del docente dice **Mzlhack → DC-1**; se usa **MnzHack** según el equipo y se registra la discrepancia. Los walkthroughs específicos de DC-1 están prohibidos por el enunciado (§16); usar documentación general y fuentes técnicas primarias.
 

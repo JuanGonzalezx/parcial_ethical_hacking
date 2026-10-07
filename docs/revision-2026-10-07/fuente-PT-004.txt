@@ -1,0 +1,80 @@
+ID: PT-004
+Nombre: Ejecución de código PHP arbitrario vía módulo PHP filter de Drupal
+Activo afectado: DC-1 (192.168.18.130:80, /node/add/page)
+Servicio: Drupal 7 — módulo PHP filter
+Severidad: Critical (CVSS 9.1)
+Vector CVSS: AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H
+CVE: N/A (configuración del CMS)
+CWE-94: Improper Control of Generation of Code ('Code Injection')
+
+Descripción técnica:
+Drupal 7 incluye el módulo opcional "PHP filter" que permite a
+usuarios con permisos suficientes insertar y ejecutar código PHP
+arbitrario en el cuerpo de un nodo (página o artículo). Al activarlo
+y otorgar el formato de texto "PHP code" a un usuario administrador,
+cualquier contenido con etiquetas <?php ?> se evalúa en el servidor
+con el UID del proceso web (www-data).
+
+Combinado con el hallazgo PT-003 (contraseña admin crackeada),
+un atacante puede:
+1. Autenticarse como admin en /user/login.
+2. Activar el módulo PHP filter.
+3. Crear un nodo con código PHP arbitrario.
+4. Ejecutar comandos del sistema operativo.
+
+Evidencia de explotación:
+- Login exitoso como admin (contraseña 53cr3t obtenida en PT-003).
+- Activación del módulo "PHP filter" en /admin/modules.
+  Pasos:
+    1. Ir a Modules en el menú superior.
+    2. Marcar el checkbox de "PHP filter".
+    3. Hacer clic en "Save configuration".
+  Drupal crea automáticamente el formato de texto "PHP code" tras
+  activar el módulo (confirmado con mensaje: "A PHP code text format
+  has been created").
+
+Figura 16: Módulo PHP filter activado
+
+
+- Creación del nodo con código PHP arbitrario:
+    1. Ir a Content → Add content → Basic page
+       (o directamente http://192.168.18.130/node/add/page)
+    2. Título: test
+    3. Body: <?php system('id; hostname; uname -a'); ?>
+    4. En "Text format", cambiar de "Filtered HTML" a "PHP code".
+    5. Hacer clic en "Save".
+
+Figura 17: Creación de una Basic Page
+
+
+
+Figura 18: Resultado del nodo /node/3 — RCE como www-data
+
+
+
+Estado: Confirmado.
+
+Impacto técnico:
+Ejecución remota de código autenticada con el UID del servidor web
+(www-data). Permite leer archivos, escribir en el sistema, pivoting
+hacia la base de datos y combinación con PT-002 (SUID find) para
+alcanzar root.
+
+Impacto para la organización:
+Un atacante que obtenga credenciales administrativas del CMS (por
+cracking, filtración o reutilización) puede comprometer el servidor
+sin necesidad de explotar vulnerabilidades del software. Amplifica
+el impacto de cualquier filtración de credenciales.
+
+Recomendación:
+- Deshabilitar completamente el módulo PHP filter en producción.
+- Aplicar el principio de mínimo privilegio: los administradores no
+  deben tener permisos de "use PHP for content" salvo casos
+  estrictamente justificados.
+- Revisar el contenido existente por posibles nodos con código PHP.
+- Auditoría de cambios recientes en módulos y contenido.
+
+Referencias:
+- https://cwe.mitre.org/data/definitions/94.html
+- https://www.drupal.org/docs/7/modules/php-filter
+- https://owasp.org/www-community/attacks/Code_Injection

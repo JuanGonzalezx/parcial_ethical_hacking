@@ -17,3 +17,14 @@
 - [ ] T14 Consolidar CherryTree y redactar todos los apartados.
 - [ ] T15 Revisar PDF completo y ensayar defensa entre los cuatro.
 - [ ] T16 Entregar el único PDF y conservar versión entregada.
+
+## Cierre tras revisión 2026-10-07
+
+- [x] Resolver rebase conservando aportes de Juan y compañeros.
+- [x] Corregir referencias falsas EV-DQH-001 a 005 sin modificar imágenes.
+- [x] Extraer fichas de Jaime y evidencias clave; integrar cadenas separadas.
+- [ ] Revisar fichas con compañero distinto del autor; justificar CVSS.
+- [ ] Resolver PT-002/PT-008 como misma causa y tratamiento de PT-004/PT-006.
+- [ ] Completar aislamiento, proof final y limpieza.
+- [ ] Aportar evidencias de la sesión adicional de Eduardo o declarar límites.
+- [ ] Maquetar PDF, revisar todas las páginas y ensayar defensa el 8 de octubre.

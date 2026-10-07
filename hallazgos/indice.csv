@@ -1,9 +1,9 @@
 id,titulo,estado,autor,revisor,archivo,evidencia_ids,severidad
-PT-001,Drupalgeddon SQLi en Drupal Core (CVE-2014-3704),confirmado,JACD,pendiente,hallazgos/PT-001.md,EV-JACD-003,9.8
-PT-002,Permisos SUID indebidos en /usr/bin/find,confirmado,JACD,pendiente,hallazgos/PT-002.md,EV-JACD-004,7.8
-PT-003,Credenciales Drupal con hash debil (admin),confirmado,JACD,pendiente,hallazgos/PT-003.md,EV-JACD-005,7.5
-PT-004,RCE via modulo PHP filter de Drupal,confirmado,JACD,pendiente,hallazgos/PT-004.md,EV-JACD-006,9.1
-PT-005,Posible ejecución remota de código en Drupal 7 (Drupalgeddon 2),posible,DQH,pendiente,hallazgos/PT-005.md,,9.8
-PT-006,Exposición de archivo de configuración (web.config),en-validacion,DQH,pendiente,hallazgos/PT-006.md,,3.7
-PT-007,Credenciales débiles de SSH para el usuario flag4,confirmado,DQH,pendiente,hallazgos/PT-007.md,EV-DQH-002,9.1
-PT-008,Escalada de privilegios local mediante binario SUID (find),confirmado,DQH,pendiente,hallazgos/PT-008.md,EV-DQH-004,7.8
+PT-001,Drupalgeddon SQLi en Drupal Core (CVE-2014-3704),en-validacion,JACD,pendiente,hallazgos/PT-001.md,EV-JACD-003;EV-JACD-009;EV-JACD-014;EV-JACD-018,pendiente
+PT-002,Permisos SUID indebidos en /usr/bin/find,en-validacion,JACD,pendiente,hallazgos/PT-002.md,EV-JACD-004;EV-JACD-007;EV-JACD-008;EV-JACD-010,pendiente
+PT-003,Contraseña de administrador Drupal recuperada por diccionario,en-validacion,JACD,pendiente,hallazgos/PT-003.md,EV-JACD-005;EV-JACD-013,pendiente
+PT-004,Ejecución PHP tras activación administrativa de PHP Filter,en-validacion,JACD,pendiente,hallazgos/PT-004.md,EV-JACD-006;EV-JACD-011;EV-JACD-012;EV-JACD-013,pendiente
+PT-005,Posible ejecución remota de código en Drupal 7 (Drupalgeddon 2),posible,DQH,pendiente,hallazgos/PT-005.md,,pendiente
+PT-006,Exposición de archivo de configuración (web.config),en-validacion,DQH,pendiente,hallazgos/PT-006.md,EV-DQH-013,pendiente
+PT-007,Credenciales débiles de SSH para el usuario flag4,en-validacion,DQH,pendiente,hallazgos/PT-007.md,EV-DQH-006;EV-DQH-007;EV-DQH-008;EV-DQH-009;EV-DQH-010,pendiente
+PT-008,Escalada de privilegios local mediante binario SUID (find),en-validacion,DQH,pendiente,hallazgos/PT-008.md,EV-DQH-011;EV-DQH-012,pendiente
