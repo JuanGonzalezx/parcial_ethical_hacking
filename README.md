@@ -38,8 +38,10 @@ Trabajo: **3–8 de octubre de 2026**, zona America/Bogota. Entrega: jueves 8; h
 
 ## Estado inicial
 
-Se incorporaron los cuadernos de Jaime y Eduardo: **13 capturas propias**, descubrimiento y enumeración inicial. Se distinguen LAB-JACD (192.168.18.130) y LAB-EJVA (192.168.81.130). No hay vulnerabilidades confirmadas ni acceso documentado. Consultar [revisión y pendientes](docs/revision-cherrytree-2026-10-03.md).
+Se incorporaron los cuadernos de Jaime y Eduardo y las dos capturas de Juan: **15 capturas propias**, descubrimiento y enumeración inicial. Se distinguen LAB-JACD (192.168.18.130) y LAB-EJVA (192.168.81.130). No hay vulnerabilidades confirmadas ni acceso documentado. Consultar [revisión y pendientes](docs/revision-cherrytree-2026-10-03.md).
 
 La tabla del docente dice **Mzlhack → DC-1**; se usa **MnzHack** según el equipo y se registra la discrepancia. Los walkthroughs específicos de DC-1 están prohibidos por el enunciado (§16); usar documentación general y fuentes técnicas primarias.
 
 **Entrega académica:** `PARCIAL_PENTEST_MnzHack_DC-1.pdf`. El repositorio y CherryTree son herramientas internas: toda evidencia necesaria debe estar integrada y explicada dentro del único PDF.
+
+Juan: [guía para continuar en UTM](docs/guia-JDOG-proxima-sesion.md). LAB-JDOG usa 192.168.128.4 como objetivo candidato; falta verificación de identidad/aislamiento; Nmap ya finalizó y la enumeración web está propuesta.

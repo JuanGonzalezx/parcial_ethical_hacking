@@ -1,16 +1,17 @@
 # Estado del trabajo
 
-Actualizado: 2026-10-03 · incorporados cuadernos de Jaime y Eduardo · reconocimiento/enumeración parciales.
+Actualizado: 2026-10-03 · incorporados cuadernos de Jaime y Eduardo y primera evidencia de Juan · reconocimiento/enumeración parciales.
 
 | Frente | Estado | Próxima acción |
 |---|---|---|
 | Estructura común | Adaptada al árbol de Jaime para los cuatro | Continuar en archivos activos de cherrytree/cuadernos.json |
 | Nombre MnzHack / Mzlhack | Por aclarar | Confirmar nombre de entrega |
-| Laboratorios | LAB-JACD .18.130 y LAB-EJVA .81.130 separados | Confirmar imagen, snapshot, identidad y aislamiento de cada uno |
+| Laboratorios | LAB-JACD .18.130, LAB-EJVA .81.130 y LAB-JDOG .128.4 candidato, separados | Confirmar imagen, snapshot, identidad y aislamiento de cada uno |
+| Juan | UTM/Parrot reportados; ping y Nmap final a .128.4: 22/80/111/47118 TCP, EV-JDOG-001/002 | Confirmar MAC/VM y aislamiento; preservar texto de Nmap y seguir TEST-JDOG-002 |
 | Jaime | ARP y ping con dos capturas; puertos declarados sin salida | Incorporar Nmap y evidencia de configuración Host-Only |
 | Eduardo | 11 capturas: red, Nmap, Gobuster, HTTP y WhatWeb | Incorporar salidas originales y validar hipótesis específicas |
-| Evidencias | 13 PNG originales extraídos, fichas e índice con hashes | Completar horas faltantes y revisión cruzada |
-| Hallazgos confirmados | 2 confirmados por DQH (SSH y SUID) | Completar validación cruzada |
+| Evidencias | 20 registros: Jaime, Eduardo, Daniel y Juan | Revisar hashes, fechas y cobertura |
+| Hallazgos | Daniel reporta SSH y SUID confirmados; Jaime documenta cuatro fichas en CherryTree | Revisar capturas, extraer fichas faltantes y completar revisión cruzada |
 | CherryTree | 2 CTB actualizados y 2 CTD alineados; originales respaldados | Comprobar apertura/guardado en la aplicación del equipo |
 | Informe | Fase de explotación y escalada añadida | Finalizar limpieza y cierre |
 | Entrega | Jueves 2026-10-08 | Confirmar hora y canal |
