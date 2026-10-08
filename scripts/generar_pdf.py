@@ -44,7 +44,7 @@ def inline(s,links=True):
 def para(s,sty='body',links=True):return Paragraph(inline(s,links),styles[sty])
 def footer(c,d):
  c.saveState();c.setStrokeColor(CYAN);c.setLineWidth(1);c.line(46,H-38,W-46,H-38)
- c.setFillColor(GRAY);c.setFont('Text',8);c.drawString(46,H-29,'MNZHACK  /  DC-1  /  PTES');c.drawRightString(W-46,H-29,'07 OCT 2026  |  v0.3')
+ c.setFillColor(GRAY);c.setFont('Text',8);c.drawString(46,H-29,'MNZHACK  /  DC-1  /  PTES');c.drawRightString(W-46,H-29,'08 OCT 2026  |  v0.5')
  c.line(46,38,W-46,38);c.drawString(46,25,'LABORATORIO ACADÉMICO  ·  USO RESTRINGIDO');c.drawRightString(W-46,25,str(d.page));c.restoreState()
 class Doc(SimpleDocTemplate):
  def afterFlowable(self,f):
@@ -61,7 +61,7 @@ class Diagram(Flowable):
  def draw(self):
   c=self.canv
   if self.kind=='attack':
-   sets=[('LAB-JACD',['ARP / HTTP Drupal','SQLi > sesión www-data','Enumeración local / find SUID','EUID 0 > bandera final'],['EV-JACD-001 / 016','EV-JACD-014 / 003 / 009','EV-JACD-007 / 008','EV-JACD-004 / 010']),('LAB-DQH',['ARP / SSH password','Credencial > sesión flag4','Enumeración local / find SUID','EUID 0 > bandera final'],['EV-DQH-001 / 006','EV-DQH-008 / 009','EV-DQH-011','EV-DQH-011 / 012'])]
+   sets=[('ESTRATEGIA 2 / WEB',['ARP / HTTP Drupal','SQLi > sesión www-data','Enumeración local / find SUID','EUID 0 > bandera final'],['EV-JACD-001 / 016','EV-JACD-014 / 003 / 009','EV-JACD-007 / 008','EV-JACD-004 / 010']),('ESTRATEGIA 3 / SSH',['ARP / SSH password','Credencial > sesión flag4','Enumeración local / find SUID','EUID 0 > bandera final'],['EV-DQH-001 / 006','EV-DQH-008 / 009','EV-DQH-011','EV-DQH-011 / 012'])]
    for col,(title,steps,refs) in enumerate(sets):
     x=col*(CW/2+5);bw=CW/2-10;c.setFillColor(NAVY);c.setFont('TextBold',11);c.drawString(x,self.height-15,title)
     for j,(step,ref) in enumerate(zip(steps,refs)):
@@ -69,7 +69,7 @@ class Diagram(Flowable):
      c.setFillColor(NAVY);c.setFont('TextBold',9);c.drawString(x+10,y+30,step);c.setFont('Text',8);c.drawString(x+10,y+13,ref)
      if j<3:c.setStrokeColor(CYAN);c.line(x+bw/2,y-2,x+bw/2,y-13);c.line(x+bw/2,y-13,x+bw/2-3,y-9);c.line(x+bw/2,y-13,x+bw/2+3,y-9)
   else:
-   rows=[('JACD','192.168.18.129','192.168.18.130','MAC ...55:ea:9d'),('DQH','192.168.18.129','192.168.18.130','MAC ...45:c1:6e'),('EJVA','192.168.81.129','192.168.81.130','MAC ...79:c1:61'),('JDOG','Parrot / IP no acreditada','192.168.128.4','Objetivo candidato UTM')]
+   rows=[('Web','192.168.18.129','192.168.18.130','MAC ...55:ea:9d'),('SSH','192.168.18.129','192.168.18.130','MAC ...45:c1:6e'),('Recon.','192.168.81.129','192.168.81.130','MAC ...79:c1:61'),('UTM','Parrot / IP no acreditada','192.168.128.4','Objetivo candidato UTM')]
    for j,(name,src,dst,note) in enumerate(rows):
     y=self.height-65-j*65
     c.setFillColor(NAVY);c.setFont('TextBold',9);c.drawString(0,y+35,name)
@@ -102,9 +102,10 @@ def markdown(text,links=True):
   if line.startswith('#'):
    level=len(line)-len(line.lstrip('#'));out.append(para(line.lstrip('# ').strip(),'h2' if level<=3 else 'h3',links));i+=1;continue
   if line.startswith('!['):i+=1;continue
+  if re.match(r'^\d+\. ',line):out.append(para(line,'body',links));i+=1;continue
   if line.startswith('- '):out.append(para('• '+line[2:],'body',links));i+=1;continue
   buf=[line];i+=1
-  while i<len(lines) and lines[i].strip() and not re.match(r'^(#|\||```|!\[|- )',lines[i].strip()):buf.append(lines[i].strip());i+=1
+  while i<len(lines) and lines[i].strip() and not re.match(r'^(#|\||```|!\[|- |\d+\. )',lines[i].strip()):buf.append(lines[i].strip());i+=1
   out.append(para(' '.join(buf),'body',links))
  return out
 
@@ -115,7 +116,7 @@ def cover(guide=False):
  items += [Spacer(1,18),para('GUÍA INTERNA DE PREPARACIÓN' if guide else 'INFORME EJECUTIVO Y TÉCNICO · PTES','h2',False),Spacer(1,22)]
  items += [para('Dos vías de acceso documentadas. Una causa compartida de escalamiento. Evidencia, impacto y remediación con límites explícitos.','body',False),Spacer(1,25)]
  for name in ['Juan David Ocampo Gonzalez | 38402','Jaime Andres Cardona Diaz | 40549','Daniel Quintero Hurtado | 31429','Eduardo Jose Villamil Arce | 37831']:items.append(para(name,'body',False))
- items += [Spacer(1,30),para('Periodo: 3-8 octubre 2026  /  Corte: 7 octubre 2026','small',False),para('Versión 0.3 para revisión del equipo. No acredita pruebas adicionales ni aprobación cruzada.','small',False)]
+ items += [Spacer(1,30),para('Periodo: 3-8 octubre 2026  /  Corte: 8 octubre 2026','small',False),para('Versión 0.5 para revisión del equipo. No acredita pruebas adicionales ni aprobación cruzada.','small',False)]
  if not guide:items.append(para('Institución y docente no informados. Nombre MnzHack indicado por el equipo; la asignación escribe Mzlhack. Aclaración administrativa pendiente.','small',False))
  return items
 
@@ -143,8 +144,8 @@ def generate_report():
     # Metadata and every explanatory paragraph from the editorial source are retained.
     detail=re.sub(r'!\[[^\]]*\]\([^\n]+\)','',detail)
     detail=re.sub(r'PENDIENTE: numeración de figura, página y revisión de legibilidad en PDF\.','',detail)
-    if 'Instancia:' not in detail:
-     detail=f'Instancia: {row["instancia"]}. Autor: {row["autor"]}. Fecha exacta: {row["fecha"]}.\n\n'+detail
+    if 'Instancia:' not in detail and 'Contexto:' not in detail:
+     detail=f'Equipo: MnzHack. Fecha exacta: {row["fecha"]}.\n\n'+detail
     if '**Acción:**' not in detail:
      detail+='\n\n**Relevancia:** '+('Sustenta '+row['hallazgo_ids']+'; interpretar junto con los límites de esa ficha.' if row['hallazgo_ids'] else 'Identifica la superficie o el contexto de esta instancia; no confirma una vulnerabilidad por sí sola.')
 

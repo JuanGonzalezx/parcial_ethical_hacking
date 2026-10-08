@@ -1,6 +1,6 @@
 # Entrega académica
 
-La edición revisable v0.3 está en [informe PDF](../output/pdf/PARCIAL_PENTEST_MnzHack_DC-1.pdf). Incluye todas las evidencias registradas; no requiere carpeta externa.
+La edición revisable v0.5 está en [informe PDF](../output/pdf/PARCIAL_PENTEST_MnzHack_DC-1.pdf). Incluye todas las evidencias registradas; no requiere carpeta externa.
 
 Antes de enviarla: cerrar datos y límites descritos en control documental, registrar revisión cruzada y confirmar canal/hora. No declarar hechos que no cuenten con evidencia.
 

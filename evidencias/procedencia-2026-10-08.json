@@ -1,0 +1,749 @@
+{
+  "incorporadas": [
+    {
+      "id": "EV-JACD-021",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "27d2968ac9f98812001fe860c7fb3251ebff336006cfe4daa7c75029263bc895",
+      "nodo": 22,
+      "offset": 84
+    },
+    {
+      "id": "EV-JACD-022",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "8ff1f62fec98caa9caa0f18410a66bae6e1bb6b85e0105c8ccd1ccb9c79d1f64",
+      "nodo": 21,
+      "offset": 100
+    },
+    {
+      "id": "EV-JACD-023",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "188d380e77105757bf66095b798dff8703cac349da794b5e50be20019e1f7007",
+      "nodo": 8,
+      "offset": 87
+    },
+    {
+      "id": "EV-JACD-024",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "54dd08ddb0039e336fd412729bd7067a8c15fed6e2b32407979bbd0b43b7ad50",
+      "nodo": 15,
+      "offset": 1580
+    },
+    {
+      "id": "EV-JACD-025",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "c61e526e891c1d89f78301618c7426788707da2fb117780f89176849ca9c9090",
+      "nodo": 15,
+      "offset": 1583
+    },
+    {
+      "id": "EV-JACD-026",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "7b063e3932e0877edad77b9765956f28cf110e7de4941223faa737ec72c0778a",
+      "nodo": 15,
+      "offset": 2402
+    },
+    {
+      "id": "EV-JACD-027",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "ae4ce27562e1221576a541e333d7929b2a16c5f2c7f27d3fb3ddfb9e3ce04fad",
+      "nodo": 18,
+      "offset": 251
+    },
+    {
+      "id": "EV-JACD-028",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "3fe111c83124edc6434032367a59b53d114cc931121e0261d46e84b0f1443276",
+      "nodo": 17,
+      "offset": 212
+    },
+    {
+      "id": "EV-JACD-029",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "fa2cd828d9c7bb1a433a13eaa3212086bc888e32549a174a93f7e713244ca3de",
+      "nodo": 16,
+      "offset": 1123
+    },
+    {
+      "id": "EV-JACD-030",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "c543fda07ea81a75ad1e53cb7647932d8d096534584ea3eae62d44d9c7a9120a",
+      "nodo": 108,
+      "offset": 114
+    },
+    {
+      "id": "EV-JACD-031",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "42f2138288a8b1fd7b2913cb685f831d26b3ab99a58fc97199131ca3a47d7fd9",
+      "nodo": 108,
+      "offset": 536
+    },
+    {
+      "id": "EV-JACD-032",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "44ce1f7ee4dbaba309c1fb5ac4d20a3afdda23c27eaa4b6ba6805e792b282c81",
+      "nodo": 108,
+      "offset": 3322
+    },
+    {
+      "id": "EV-JACD-033",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "10f755c064f8a71f0560933b8811a0736a431db00a121779d3e9eb3722f45423",
+      "nodo": 108,
+      "offset": 3376
+    },
+    {
+      "id": "EV-JACD-034",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "sha256": "84cec34f36af1ff6112ee3e0dc6d172f5690c94552bc98cd4770aa9d3405cca0",
+      "nodo": 108,
+      "offset": 8970
+    },
+    {
+      "id": "EV-DQH-015",
+      "fuente": "evidencias/originales/DQH/image copy 11.png",
+      "sha256": "e21ecf10e184a0d4833be2318419caf89d144b9606c3b51860ccd6d51f0c21cd"
+    },
+    {
+      "id": "EV-DQH-016",
+      "fuente": "evidencias/originales/DQH/image copy 12.png",
+      "sha256": "62fccc493449cfb33a81cef2b51e5c3760c629ae36cc98d0f025934b35d3a3ac"
+    },
+    {
+      "id": "EV-DQH-017",
+      "fuente": "evidencias/originales/DQH/image copy 13.png",
+      "sha256": "7a25b6b1087969a254d5fc7373157575785bea37453f36efe6043de4d72e65bc"
+    },
+    {
+      "id": "EV-DQH-018",
+      "fuente": "evidencias/originales/DQH/image copy 14.png",
+      "sha256": "ed4960a56f9317443215db2a79679a473183604e90fab9530e0c0e4afab98b56"
+    },
+    {
+      "id": "EV-DQH-019",
+      "fuente": "evidencias/originales/DQH/image copy 15.png",
+      "sha256": "95ffa4925012116a88d49f4e29bfbeb725eabc866fe3ff7b1e52090bc0cca800"
+    },
+    {
+      "id": "EV-DQH-020",
+      "fuente": "evidencias/originales/DQH/image copy 16.png",
+      "sha256": "3b7c1c8c8f78fc9d212b7efea2e6880d1eab7f9d893fc2de6317977a3d5437f9"
+    },
+    {
+      "id": "EV-DQH-021",
+      "fuente": "evidencias/originales/DQH/image copy 19.png",
+      "sha256": "815635b3a373c7edc672dfe19d79e862a3b9f170b23d37d2db6165fa90028879"
+    },
+    {
+      "id": "EV-DQH-022",
+      "fuente": "evidencias/originales/DQH/image copy 6.png",
+      "sha256": "8fac3088ca0d47a2c6e7c4f99f1b2c40b77df2b5d8272dbf0175aaaf43fbe25d"
+    },
+    {
+      "id": "EV-DQH-023",
+      "fuente": "evidencias/originales/DQH/image copy 7.png",
+      "sha256": "02f0defe7cbf50fd90123df07cd89e144733536136f683ca70fe57386adab1e0"
+    },
+    {
+      "id": "EV-DQH-024",
+      "fuente": "evidencias/originales/DQH/image copy 8.png",
+      "sha256": "caa056a23bcbcaa96f9d0d245c9a651613503ae3f5f90f863109d145df9265b7"
+    },
+    {
+      "id": "EV-DQH-025",
+      "fuente": "evidencias/originales/DQH/image copy 9.png",
+      "sha256": "380a5acf1671046b6a3ad8c7a54d87837a5cb6ed3b93fe0ac554c517c8f88277"
+    },
+    {
+      "id": "EV-DQH-026",
+      "fuente": "evidencias/originales/DQH/image copy.png",
+      "sha256": "9dcc013e38f02a29f340a6d8812317b01e8c58b99756c7d94cf86bbfa6a2581f"
+    },
+    {
+      "id": "EV-DQH-027",
+      "fuente": "evidencias/originales/DQH/image.png",
+      "sha256": "1aa7c3950853fbf087859055d483ad1af055e8a63294abf3c0bac332c5b12868"
+    }
+  ],
+  "inventario_completo": [
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 20,
+      "offset": 102,
+      "sha256": "3f5bef9e985599772908c20f6c4a5f2666e87195729b125bd0057ed646c4cfed",
+      "evidencia": "EV-JACD-018"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 10,
+      "offset": 167,
+      "sha256": "f00edd664d3e46b0c3cca24a2d11705ebb4ff0d5d5f69dd61ac34310ae63b7d5",
+      "evidencia": "EV-JACD-016"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 10,
+      "offset": 170,
+      "sha256": "fd65a16fa5d21b0ad357e5e0a71795f156ce6d0f52a233e86683a65479f66cb5",
+      "evidencia": "EV-JACD-017"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 22,
+      "offset": 84,
+      "sha256": "27d2968ac9f98812001fe860c7fb3251ebff336006cfe4daa7c75029263bc895",
+      "evidencia": "EV-JACD-021"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 22,
+      "offset": 135,
+      "sha256": "8f58529b6fcd4747195a11992f8311e858f1f2c9bd36115d28fb43147ced0ad9",
+      "evidencia": "EV-JACD-020"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 9,
+      "offset": 139,
+      "sha256": "cf74284976f6c6553245737ab03df1ddfe81fbcbfcad94afa3e23bb167d8a700",
+      "evidencia": "EV-JACD-015"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 21,
+      "offset": 100,
+      "sha256": "8ff1f62fec98caa9caa0f18410a66bae6e1bb6b85e0105c8ccd1ccb9c79d1f64",
+      "evidencia": "EV-JACD-022"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 8,
+      "offset": 87,
+      "sha256": "188d380e77105757bf66095b798dff8703cac349da794b5e50be20019e1f7007",
+      "evidencia": "EV-JACD-023"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 8,
+      "offset": 501,
+      "sha256": "f37a4e7324f5a51492e6143aac2e072504cd8c3563f45797f23b8f90a6694d51",
+      "evidencia": "EV-JACD-001"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 8,
+      "offset": 1004,
+      "sha256": "c2846070dfbafbb4153a371687268633637513ae57a38f40429c2b05411819ec",
+      "evidencia": "EV-JACD-002"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 15,
+      "offset": 239,
+      "sha256": "54897a0089fede7bf799de82dc4321e0f97117f2ccf7117923bfec4bccc418f6",
+      "evidencia": "EV-JACD-003"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 15,
+      "offset": 1580,
+      "sha256": "54dd08ddb0039e336fd412729bd7067a8c15fed6e2b32407979bbd0b43b7ad50",
+      "evidencia": "EV-JACD-024"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 15,
+      "offset": 1583,
+      "sha256": "c61e526e891c1d89f78301618c7426788707da2fb117780f89176849ca9c9090",
+      "evidencia": "EV-JACD-025"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 15,
+      "offset": 2402,
+      "sha256": "7b063e3932e0877edad77b9765956f28cf110e7de4941223faa737ec72c0778a",
+      "evidencia": "EV-JACD-026"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 18,
+      "offset": 251,
+      "sha256": "ae4ce27562e1221576a541e333d7929b2a16c5f2c7f27d3fb3ddfb9e3ce04fad",
+      "evidencia": "EV-JACD-027"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 18,
+      "offset": 933,
+      "sha256": "b98d9eab3693f2f5acd01d4eaf94567ba29c3817faa8a3389ac7fc83aa04d06a",
+      "evidencia": "EV-JACD-010"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 17,
+      "offset": 212,
+      "sha256": "3fe111c83124edc6434032367a59b53d114cc931121e0261d46e84b0f1443276",
+      "evidencia": "EV-JACD-028"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 17,
+      "offset": 826,
+      "sha256": "6dedcd5d41e15df3486e54964009cdb97e2e44435ba272474280e6dbf95d6a1a",
+      "evidencia": "EV-JACD-007"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 17,
+      "offset": 2112,
+      "sha256": "abbe03a1311bb3ea2a2675ea39bb36e647baa82dbf09c1f2d155eae3d7dbb946",
+      "evidencia": "EV-JACD-008"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 17,
+      "offset": 2646,
+      "sha256": "814d5f8e74dfb1a7d8130907522797f50173e40aae0eba4b0f3c309ce69fbc9c",
+      "evidencia": "EV-JACD-004"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 16,
+      "offset": 246,
+      "sha256": "43d18e46d5b95985179106731532bf6fc08f21b422d8ce3edf1af79f459d7444",
+      "evidencia": "EV-JACD-009"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 16,
+      "offset": 1123,
+      "sha256": "fa2cd828d9c7bb1a433a13eaa3212086bc888e32549a174a93f7e713244ca3de",
+      "evidencia": "EV-JACD-029"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 16,
+      "offset": 1548,
+      "sha256": "2a7df9d88da314e7c17b60d89095823260cdc9e19f3bfa2c6169238fca15fc5a",
+      "evidencia": "EV-JACD-019"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 114,
+      "sha256": "c543fda07ea81a75ad1e53cb7647932d8d096534584ea3eae62d44d9c7a9120a",
+      "evidencia": "EV-JACD-030"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 536,
+      "sha256": "42f2138288a8b1fd7b2913cb685f831d26b3ab99a58fc97199131ca3a47d7fd9",
+      "evidencia": "EV-JACD-031"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 3322,
+      "sha256": "44ce1f7ee4dbaba309c1fb5ac4d20a3afdda23c27eaa4b6ba6805e792b282c81",
+      "evidencia": "EV-JACD-032"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 3376,
+      "sha256": "10f755c064f8a71f0560933b8811a0736a431db00a121779d3e9eb3722f45423",
+      "evidencia": "EV-JACD-033"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 3421,
+      "sha256": "4a709d07cb8945757d44c8088bf536052a5ea43e847a1d0a632030e755561c13",
+      "evidencia": "EV-JACD-014"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 8912,
+      "sha256": "019d621ba7879726f4e4f1d82d31a1448f1a90d7779534e0387adbdfb4f42a79",
+      "evidencia": "EV-JACD-005"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 8970,
+      "sha256": "84cec34f36af1ff6112ee3e0dc6d172f5690c94552bc98cd4770aa9d3405cca0",
+      "evidencia": "EV-JACD-034"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 9024,
+      "sha256": "457cff8e26e6d20914a9430d5f0884dab12b2d73c7725a2f9d0dc876d25731d2",
+      "evidencia": "EV-JACD-013"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 11744,
+      "sha256": "4fd5e9201a4fa235689c585d598b52e67a6844d64dda9d0f735bfda11f9efd01",
+      "evidencia": "EV-JACD-011"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 12111,
+      "sha256": "8ca555528ee0e5a91b13f9566b5c2578f862c9b8714e369ba01e0a208d026d2c",
+      "evidencia": "EV-JACD-012"
+    },
+    {
+      "autor": "JACD",
+      "fuente": "cherrytree/individuales/PARCIAL_PENTEST_JAIME_DC1.ctb",
+      "nodo": 108,
+      "offset": 12173,
+      "sha256": "e37317e61b4ddd5192ce2936791cdf53b18ecac771bcbf4f215a2155bb822029",
+      "evidencia": "EV-JACD-006"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 0,
+      "sha256": "1f71e3522c3b0d2d78d53dba79d14e8901a8679f45ede9beb2fbd88c2b1c59d3",
+      "evidencia": "EV-EJVA-001"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 288,
+      "sha256": "d2d00039a36cb1d1e80a23e96822537e894e03a0a155bb343458d5b9e65278f8",
+      "evidencia": "EV-EJVA-002"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 291,
+      "sha256": "2d7c1b2569bcfae404f1bcca685a8c854ab0dda392486af90587ddd30d926372",
+      "evidencia": "EV-EJVA-003"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 294,
+      "sha256": "782633c818375c575f2a8e451ad38d92a220dc14fcc8d09eec05ed788c11d86a",
+      "evidencia": "EV-EJVA-004"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 501,
+      "sha256": "fd47f0ac375aae9c92316922414be03af97d48d13bba48b4abb8088f8e2f1194",
+      "evidencia": "EV-EJVA-005"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 796,
+      "sha256": "da564cbf5b82c304361d8da03f7854ec060bf5895179fde33f01346be0b78ce0",
+      "evidencia": "EV-EJVA-006"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 798,
+      "sha256": "3476c2bfd78539327c0d9ac130b386b6b276be1a0fae48da016548780f76a956",
+      "evidencia": "EV-EJVA-007"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 1100,
+      "sha256": "7c792f582f325bd7a309ce963bfa4e2b47e85da01be16c389369eba4773659e0",
+      "evidencia": "EV-EJVA-008"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 1103,
+      "sha256": "8a3c0d56f1c948e4d786bdd292f7ad53c87be6a8e899368a8ce99395b0f9a1ed",
+      "evidencia": "EV-EJVA-009"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 1106,
+      "sha256": "8e89853bc558018f15ec929889e05454e5e3d5c7f36d1406817ed174e2e42ea4",
+      "evidencia": "EV-EJVA-010"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 3,
+      "offset": 1141,
+      "sha256": "fce9e3f66ea6dcbe524248b28fcbe42e4a79e53bba295da9f071213b9a39706d",
+      "evidencia": "EV-EJVA-011"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 119,
+      "offset": 0,
+      "sha256": "1f71e3522c3b0d2d78d53dba79d14e8901a8679f45ede9beb2fbd88c2b1c59d3",
+      "evidencia": "EV-EJVA-001"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 120,
+      "offset": 0,
+      "sha256": "d2d00039a36cb1d1e80a23e96822537e894e03a0a155bb343458d5b9e65278f8",
+      "evidencia": "EV-EJVA-002"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 121,
+      "offset": 0,
+      "sha256": "2d7c1b2569bcfae404f1bcca685a8c854ab0dda392486af90587ddd30d926372",
+      "evidencia": "EV-EJVA-003"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 122,
+      "offset": 0,
+      "sha256": "782633c818375c575f2a8e451ad38d92a220dc14fcc8d09eec05ed788c11d86a",
+      "evidencia": "EV-EJVA-004"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 123,
+      "offset": 0,
+      "sha256": "fd47f0ac375aae9c92316922414be03af97d48d13bba48b4abb8088f8e2f1194",
+      "evidencia": "EV-EJVA-005"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 124,
+      "offset": 0,
+      "sha256": "da564cbf5b82c304361d8da03f7854ec060bf5895179fde33f01346be0b78ce0",
+      "evidencia": "EV-EJVA-006"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 125,
+      "offset": 0,
+      "sha256": "3476c2bfd78539327c0d9ac130b386b6b276be1a0fae48da016548780f76a956",
+      "evidencia": "EV-EJVA-007"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 126,
+      "offset": 0,
+      "sha256": "7c792f582f325bd7a309ce963bfa4e2b47e85da01be16c389369eba4773659e0",
+      "evidencia": "EV-EJVA-008"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 127,
+      "offset": 0,
+      "sha256": "8a3c0d56f1c948e4d786bdd292f7ad53c87be6a8e899368a8ce99395b0f9a1ed",
+      "evidencia": "EV-EJVA-009"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 128,
+      "offset": 0,
+      "sha256": "8e89853bc558018f15ec929889e05454e5e3d5c7f36d1406817ed174e2e42ea4",
+      "evidencia": "EV-EJVA-010"
+    },
+    {
+      "autor": "EJVA",
+      "fuente": "cherrytree/individuales/WriteUp_Basic_Pentesting1--parcial1EDuardo.ctb",
+      "nodo": 129,
+      "offset": 0,
+      "sha256": "fce9e3f66ea6dcbe524248b28fcbe42e4a79e53bba295da9f071213b9a39706d",
+      "evidencia": "EV-EJVA-011"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 0.png",
+      "sha256": "f4361227d46ddafc68284062034240a42ecd4b3e0e78783743ac02b764a543d6",
+      "evidencia": "EV-DQH-014"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 10.png",
+      "sha256": "0d5cc2733eee1e1e9d7b80bef0931b66afdf8648e521fd1fc622cec7ac7fa153",
+      "evidencia": "EV-DQH-013"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 11.png",
+      "sha256": "e21ecf10e184a0d4833be2318419caf89d144b9606c3b51860ccd6d51f0c21cd",
+      "evidencia": "EV-DQH-015"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 12.png",
+      "sha256": "62fccc493449cfb33a81cef2b51e5c3760c629ae36cc98d0f025934b35d3a3ac",
+      "evidencia": "EV-DQH-016"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 13.png",
+      "sha256": "7a25b6b1087969a254d5fc7373157575785bea37453f36efe6043de4d72e65bc",
+      "evidencia": "EV-DQH-017"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 14.png",
+      "sha256": "ed4960a56f9317443215db2a79679a473183604e90fab9530e0c0e4afab98b56",
+      "evidencia": "EV-DQH-018"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 15.png",
+      "sha256": "95ffa4925012116a88d49f4e29bfbeb725eabc866fe3ff7b1e52090bc0cca800",
+      "evidencia": "EV-DQH-019"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 16.png",
+      "sha256": "3b7c1c8c8f78fc9d212b7efea2e6880d1eab7f9d893fc2de6317977a3d5437f9",
+      "evidencia": "EV-DQH-020"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 17.png",
+      "sha256": "371ca7f6d4c0b7c30836a979383e52ae4d3bd81921ae2082652b69bc766ea056",
+      "evidencia": "EV-DQH-006"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 18.png",
+      "sha256": "dc194a62e7c0b6508fefd57f624031734c50809ac4cc15c3a19e6ba7ffc08396",
+      "evidencia": "EV-DQH-007"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 19.png",
+      "sha256": "815635b3a373c7edc672dfe19d79e862a3b9f170b23d37d2db6165fa90028879",
+      "evidencia": "EV-DQH-021"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 20.png",
+      "sha256": "91fe81bfa3a5019159d51d39e59bcfb702e9a826a6e3ddd80c08f49de0d574f3",
+      "evidencia": "EV-DQH-008"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 21.png",
+      "sha256": "459aff52700d1104877bca14bcd4ed28c23c0e141dd3c14d848ba06d2b09450a",
+      "evidencia": "EV-DQH-009"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 22.png",
+      "sha256": "d38617b1ce34465984dec1c541523359ebf501b1829809530339defc68cfa5d7",
+      "evidencia": "EV-DQH-010"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 23.png",
+      "sha256": "be0cc341fe289c2f62a47fe7ee1ac8604c48c35f3555b16320032745add107e4",
+      "evidencia": "EV-DQH-011"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 24.png",
+      "sha256": "f6d07ecae895ac050396cf4c5b61c197ccd056273921c7d357a6160c21e98efd",
+      "evidencia": "EV-DQH-012"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 6.png",
+      "sha256": "8fac3088ca0d47a2c6e7c4f99f1b2c40b77df2b5d8272dbf0175aaaf43fbe25d",
+      "evidencia": "EV-DQH-022"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 7.png",
+      "sha256": "02f0defe7cbf50fd90123df07cd89e144733536136f683ca70fe57386adab1e0",
+      "evidencia": "EV-DQH-023"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 8.png",
+      "sha256": "caa056a23bcbcaa96f9d0d245c9a651613503ae3f5f90f863109d145df9265b7",
+      "evidencia": "EV-DQH-024"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy 9.png",
+      "sha256": "380a5acf1671046b6a3ad8c7a54d87837a5cb6ed3b93fe0ac554c517c8f88277",
+      "evidencia": "EV-DQH-025"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image copy.png",
+      "sha256": "9dcc013e38f02a29f340a6d8812317b01e8c58b99756c7d94cf86bbfa6a2581f",
+      "evidencia": "EV-DQH-026"
+    },
+    {
+      "autor": "DQH",
+      "fuente": "evidencias/originales/DQH/image.png",
+      "sha256": "1aa7c3950853fbf087859055d483ad1af055e8a63294abf3c0bac332c5b12868",
+      "evidencia": "EV-DQH-027"
+    }
+  ]
+}

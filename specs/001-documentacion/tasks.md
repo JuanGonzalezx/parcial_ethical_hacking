@@ -37,3 +37,11 @@
 - [x] Generar guía interna con evaluación por criterio, reparto, recorrido y ensayo.
 - [x] Verificar archivos, hashes, correspondencia de páginas y maquetación.
 - [ ] Registrar revisión cruzada real y cerrar limitaciones del laboratorio antes de entregar.
+
+## Consolidación del 8 de octubre
+
+- [x] Inventariar nodos y todas las imágenes de los CTB activos, además de capturas sueltas de Daniel.
+- [x] Incorporar 27 capturas omitidas con procedencia, hash, ficha y figura.
+- [x] Reorganizar PDF y guía por estrategias y retirar etiquetas LAB.
+- [x] Corregir PT-005/PT-006/PT-007 y sincronizar el informe con las fichas.
+- [x] Revisar PDF regenerado y conservar originales de CherryTree.

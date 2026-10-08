@@ -1,14 +1,7 @@
 # Reporting
 
-Estado: borrador actualizado con reconocimiento/enumeración de dos instancias y 13 capturas integradas en la fuente Markdown. Exportación y revisión del PDF pendientes.
+Actualizado el 8 de octubre de 2026. Informe v0.5 generado y revisado visualmente: 25 apartados, 74 figuras integradas, 101 páginas e índice navegable. Guía interna de 12 páginas. Organización por cuatro estrategias, sin etiquetas LAB en los PDF.
 
-Integrar las evidencias en los 25 apartados, diagrama propio de cadena real, impacto y remediaciones. Revisar PDF y defensa con docs/04-defensa-y-entrega.md.
+Todas las imágenes únicas de los CTB activos de Jaime/Eduardo y las capturas sueltas de Daniel están vinculadas a un EV. Se conserva la diferencia entre prueba observada y relato. La procedencia detallada está en evidencias/procedencia-2026-10-08.json.
 
-## Registro de avance
-
-| Sesión / TEST | Instancia | EV | PT si aplica | Observación | Interpretación y siguiente paso | Revisor |
-|---|---|---|---|---|---|---|
-
-## Cobertura, límites y cierre
-
-PENDIENTE. Registrar lo intentado, lo no probado y por qué. No marcar completa esta fase solo por disponer de esta plantilla.
+Pendientes de cierre técnico: revisión cruzada, severidades definitivas, datos de aislamiento/snapshot, continuidad temporal y limpieza. El PDF generado no constituye aprobación técnica ni garantía de calificación.

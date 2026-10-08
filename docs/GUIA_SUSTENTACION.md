@@ -66,11 +66,11 @@ Abrir EV-JACD-014 (opciones), 003 (sesión) y 009 (identidad). El módulo observ
 
 RHOSTS designa el objetivo; TARGETURI la base web; LHOST/LPORT el destino al que regresa la conexión; el payload determina el código ejecutado. LHOST debe ser alcanzable desde el laboratorio. La sesión www-data tiene privilegios del proceso web, no root. La evidencia de sesión valida el resultado; configurar opciones por sí solo no lo hace.
 
-Falta recuperar versión/hash del módulo usado y continuidad temporal. No confundir este recorrido con CVE-2018-7600: PT-005 sigue sin PoC propia.
+La consola de Jaime muestra Metasploit v6.5.3-dev (EV-JACD-032); falta recuperar hash/revisión del módulo usado y continuidad temporal. No confundir este recorrido con CVE-2018-7600: PT-005 sigue sin PoC propia.
 
 ### Paso 4. Explicar el acceso de Daniel
 
-EV-DQH-006 acredita autenticación password; 007 solo muestra una enumeración en progreso. Por tanto, no afirmar que ese módulo descubrió flag4. Preguntar al autor cómo obtuvo ese candidato y registrar la respuesta como reportada hasta tener evidencia.
+EV-DQH-006 acredita autenticación password; 007 muestra una enumeración en progreso; EV-DQH-021 muestra el final sin usuarios válidos identificados y la lista que ya contenía flag4. Por tanto, no afirmar que ese módulo descubrió flag4. Preguntar al autor cómo obtuvo ese candidato y registrar la respuesta como reportada hasta tener evidencia.
 
 EV-DQH-008 muestra Hydra con credencial obtenida; 009 demuestra login SSH; 010 muestra el entorno del usuario. -l fija un usuario, -P indica diccionario y -t controla concurrencia. La duración visible es 2 minutos 35 segundos. Haber encontrado una contraseña concreta no demuestra que todas las cuentas sean débiles.
 
@@ -176,3 +176,12 @@ Revisar portada, 25 apartados, índice, referencias EV, interpretación de cada 
 La revisión automática valida estructura y hashes, no la veracidad de una captura ni el dominio oral del equipo. Quien revise una ficha debe poder reconstruirla leyendo solo el informe. Si algo sigue sin evidencia, explicar el límite en lugar de inventar el resultado.
 
 Fuentes: enunciado académico, páginas 3-9; evidencias propias citadas en el informe; FIRST CVSS 3.1 (https://www.first.org/cvss/v3.1/specification-document); código del módulo Rapid7 citado en la sección 24 del informe. No se consultaron soluciones específicas de DC-1.
+
+## 09. Mapa de estrategias para sustentar
+
+1. Reconocimiento: Eduardo explica cómo ARP, Nmap y web delimitan superficie; Juan compara su verificación UTM sin trasladar IP ni versiones entre capturas.
+2. Acceso web: Jaime conecta investigación, configuración, sesión 4 y segunda sesión 11; explica por qué estabilizar TTY no equivale a escalar privilegios.
+3. Acceso SSH: Daniel explica que flag4 era un candidato, que el módulo terminó sin identificar usuarios válidos y que el login posterior sí valida la credencial.
+4. Escalamiento e impacto: los cuatro explican find SUID, UID frente a EUID, lectura de shadow/bandera y límites de limpieza. Se conserva una sola causa técnica de escalamiento con dos recorridos.
+
+Las capturas adicionales se incorporaron el 8 de octubre sin considerarlas nuevas ejecuciones. No es necesario que el autor hubiera llenado una plantilla para reconocer una prueba visible. Lo que la imagen no demuestra se mantiene como relato o límite.
