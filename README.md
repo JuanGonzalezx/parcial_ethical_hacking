@@ -38,7 +38,7 @@ Trabajo: **3–8 de octubre de 2026**, zona America/Bogota. Entrega: jueves 8; h
 
 ## Estado actual al 7 de octubre
 
-Rebase resuelto. **47 evidencias registradas y ocho fichas de hallazgo**. Jaime y Daniel aportan capturas de acceso inicial y privilegio efectivo root en instancias distintas. Falta revisión cruzada, cierre de clasificaciones y PDF final. PT-002/PT-008 comparten causa; no equivalen a ocho vulnerabilidades únicas confirmadas.
+Rebase resuelto. **47 evidencias registradas y ocho fichas de hallazgo**. Jaime y Daniel aportan capturas de acceso inicial y privilegio efectivo root en instancias distintas. PDF v0.3 generado; faltan revisión cruzada, cierre de clasificaciones y datos de laboratorio. PT-002/PT-008 comparten causa; no equivalen a ocho vulnerabilidades únicas confirmadas.
 
 Comenzar por [revisión y plan de cierre](docs/revision-2026-10-07/REVISION.md) y [estado actual](docs/estado.md). Se conservaron los cuadernos y las imágenes originales.
 
@@ -47,3 +47,9 @@ La tabla del docente dice **Mzlhack → DC-1**; se usa **MnzHack** según el equ
 **Entrega académica:** `PARCIAL_PENTEST_MnzHack_DC-1.pdf`. El repositorio y CherryTree son herramientas internas: toda evidencia necesaria debe estar integrada y explicada dentro del único PDF.
 
 Juan: [guía para continuar en UTM](docs/guia-JDOG-proxima-sesion.md). LAB-JDOG usa 192.168.128.4 como objetivo candidato; falta verificación de identidad/aislamiento; Nmap ya finalizó y la enumeración web está propuesta.
+
+## Informe y preparación de defensa
+
+- [Informe PDF v0.3](output/pdf/PARCIAL_PENTEST_MnzHack_DC-1.pdf): 73 páginas, 25 apartados y 47 evidencias integradas.
+- [Guía interna de sustentación](output/pdf/GUIA_SUSTENTACION_MnzHack_DC-1.pdf): 11 páginas con evaluación, reparto, recorrido explicado y preguntas.
+- [Fuente de la guía](docs/GUIA_SUSTENTACION.md). Los pendientes se declaran: no se garantiza nota ni aprobación final.

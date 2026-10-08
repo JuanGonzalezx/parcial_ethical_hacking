@@ -28,3 +28,12 @@
 - [ ] Completar aislamiento, proof final y limpieza.
 - [ ] Aportar evidencias de la sesión adicional de Eduardo o declarar límites.
 - [ ] Maquetar PDF, revisar todas las páginas y ensayar defensa el 8 de octubre.
+
+## PDF y defensa - 7 de octubre
+
+- [x] Contrastar los 25 apartados y los 100 puntos con el enunciado original.
+- [x] Complementar alcance, metodología, modelo de amenazas e interpretación del impacto sin crear pruebas.
+- [x] Generar PDF v0.3 con 47 figuras, diagramas propios, índice y enlaces internos.
+- [x] Generar guía interna con evaluación por criterio, reparto, recorrido y ensayo.
+- [x] Verificar archivos, hashes, correspondencia de páginas y maquetación.
+- [ ] Registrar revisión cruzada real y cerrar limitaciones del laboratorio antes de entregar.

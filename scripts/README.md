@@ -9,3 +9,7 @@ Autor/revisor en CSV: usar JDOG, JACD, DQH o EJVA. Las relaciones EV ↔ PT debe
 El control se comprobó con una copia temporal: registro coherente aceptado y cambio del archivo de evidencia detectado por hash. No se guardaron esos datos ficticios en los registros reales.
 
 El inventario `cherrytree/cuadernos.json` identifica los cuatro archivos activos (CTB/CTD). Para CTB se comprueba integridad SQLite, XML interno, jerarquía, referencias de objetos y banderas de imágenes. La validación se hace en lectura solamente. `no-registrada` es una fecha desconocida explícita y produce aviso, nunca una fecha inventada.
+
+## Generación del PDF
+
+`generar_pdf.py` usa ReportLab, Pillow y pypdf; requiere Arial del sistema macOS en esta versión. Ejecutarlo con un Python que tenga esas dependencias. Lee informe/INFORME.md y docs/GUIA_SUSTENTACION.md y produce los dos PDF en output/pdf. Actualiza únicamente figura/pagina_pdf del índice de evidencias; no modifica PNG ni CherryTree. Tras regenerar, revisar el PDF, recalcular su manifiesto y verificar enlaces, figuras y páginas antes de compartir. El script no ejecuta pruebas de red.

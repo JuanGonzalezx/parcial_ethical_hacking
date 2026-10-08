@@ -24,4 +24,6 @@ Cada integrante elige una evidencia de otro compañero y explica: qué pregunta 
 - [ ] Todos ensayan la defensa completa.
 - [ ] Confirmar hora/canal de entrega y conservar copia exacta del PDF entregado.
 
-Archivo: `entregables/PARCIAL_PENTEST_MnzHack_DC-1.pdf`. No existe todavía: esta fase prepara su fuente y controles, no genera un informe con resultados ficticios.
+Archivo: `entregables/PARCIAL_PENTEST_MnzHack_DC-1.pdf`. La edición v0.3 existe en output/pdf/PARCIAL_PENTEST_MnzHack_DC-1.pdf. Tiene revisión visual y controles estructurales; falta aprobación técnica del equipo antes de tratarla como entrega cerrada.
+
+Guía de trabajo y ensayo: [GUIA_SUSTENTACION.md](GUIA_SUSTENTACION.md). La evaluación por criterio conserva las limitaciones de evidencia.

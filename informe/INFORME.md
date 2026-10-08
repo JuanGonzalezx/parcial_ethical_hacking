@@ -1,28 +1,42 @@
 # Informe de pentest · MnzHack · DC-1
 
-BORRADOR DE TRABAJO. Acceso inicial y privilegio efectivo root respaldados por capturas; revisión cruzada y cierre editorial pendientes. Esta fuente no es el PDF de entrega.
+Versión 0.3 para revisión del equipo, 7 de octubre de 2026. Resultados respaldados por capturas; se declaran las limitaciones de evidencia y la revisión humana pendiente. Documento académico de distribución restringida al equipo y al docente.
 
 ## 01. Portada
 
-**MnzHack · DC-1 · Seguridad Informática**
+**MnzHack | DC-1 | Seguridad Informática**
 
-Juan David Ocampo Gonzalez — 38402
+Juan David Ocampo Gonzalez - 38402
 
-Jaime Andres Cardona Diaz — 40549
+Jaime Andres Cardona Diaz - 40549
 
-Daniel Quintero Hurtado — 31429
+Daniel Quintero Hurtado - 31429
 
-Eduardo Jose Villamil Arce — 37831
+Eduardo Jose Villamil Arce - 37831
 
-Periodo: 3–8 octubre 2026. PENDIENTE: institución/docente, nombre de equipo aclarado y fecha final.
+Periodo del ejercicio: 3 al 8 de octubre de 2026. Corte documental: 7 de octubre de 2026. Metodología PTES. Informe técnico y ejecutivo de laboratorio autorizado.
+
+Institución y docente no informados en el material recibido. Se conserva MnzHack, nombre indicado por el equipo; la tabla de asignación del docente escribe Mzlhack. Esta diferencia administrativa requiere aclaración.
 
 ## 02. Control documental
 
-Versión de trabajo 0.2 · revisión documental 2026-10-07. Evidencias originales conservadas; referencias corregidas. Autores de pruebas: JACD, DQH, EJVA y JDOG según cada figura. PENDIENTE: revisión cruzada, versión final, nombre de equipo aclarado y fecha de entrega.
+| Campo | Registro |
+|---|---|
+| Documento | PARCIAL_PENTEST_MnzHack_DC-1.pdf |
+| Versión | 0.3 - revisión documental del 7 de octubre de 2026 |
+| Autores | Los cuatro integrantes identificados en portada; autor de cada prueba en cada figura |
+| Clasificación | Uso académico restringido; incluye credenciales del laboratorio deliberadamente vulnerable |
+| Integridad | Originales preservados; 47 registros con SHA-256 y procedencia |
+| Revisión | Corrección documental y visual realizada; revisión cruzada técnica por los integrantes pendiente |
+| Historial | v0.1 reconocimiento; v0.2 consolidación y corrección de referencias; v0.3 explicación, maquetación y evaluación de cobertura |
+
+Se distinguen cuatro niveles: **observado** en captura; **reportado** por el autor; **inferido** con explicación; **no verificado**. El estado en-validacion de una ficha puede indicar revisión cruzada pendiente aunque su resultado técnico sea visible. No se han ejecutado nuevas pruebas ni remediaciones al elaborar esta versión.
+
+Limitaciones transversales: faltan configuración de aislamiento/snapshots, algunas marcas temporales, versión exacta de herramientas de explotación y cierre de limpieza. Las fechas parciales visibles se conservan sin inventar hora de captura. La ausencia de una salida no prueba un resultado negativo.
 
 ## 03. Tabla de contenido
 
-PENDIENTE: generar al maquetar; verificar títulos y páginas contra el PDF final.
+El PDF incorpora un índice automático con páginas y marcadores. Los identificadores EV de las secciones técnicas conducen a las figuras del anexo; cada figura contiene su explicación y su huella de integridad.
 
 ## 04. Resumen ejecutivo
 
@@ -30,7 +44,7 @@ Las evidencias revisadas muestran que un atacante en la red del laboratorio pued
 
 Las prioridades de remediación son actualizar la aplicación a una plataforma soportada, corregir permisos SUID y fortalecer credenciales y privilegios administrativos. La activación de PHP Filter durante la prueba se trata como escenario condicionado a una modificación del evaluador.
 
-PENDIENTE: revisión humana de las fichas, cierre de severidades y evidencia de restauración del laboratorio. Los avances posteriores de Eduardo continúan reportados sin capturas nuevas.
+Limitaciones: revisión humana de las fichas, cierre de severidades y evidencia de restauración del laboratorio no completados. Los avances posteriores de Eduardo continúan reportados sin capturas nuevas.
 
 ## 05. Objetivos
 
@@ -38,7 +52,18 @@ Determinar si un atacante con acceso a la misma red puede comprometer DC-1 y alc
 
 ## 06. Alcance
 
-PENDIENTE: datos reales de docs/02-alcance-roe.md, modalidad y justificación.
+El activo autorizado es exclusivamente la VM DC-1 asignada. Se documentan cuatro copias de laboratorio, no cuatro servidores de una organización real. Las IP privadas identifican cada sesión y pueden cambiar al reiniciar o restaurar; se correlacionan con MAC, autor y evidencia, nunca solo con el hostname DC-1.
+
+| Instancia | IP objetivo | Servicio / cobertura | Evidencia base |
+|---|---|---|---|
+| LAB-JACD | 192.168.18.130 | TCP, HTTP, RPC, acceso y escalamiento local | EV-JACD-001, EV-JACD-015, EV-JACD-003, EV-JACD-004 |
+| LAB-DQH | 192.168.18.130 | TCP, web, SSH y escalamiento local | EV-DQH-001, EV-DQH-002, EV-DQH-009, EV-DQH-011 |
+| LAB-EJVA | 192.168.81.130 | Reconocimiento y enumeración evidenciados | EV-EJVA-002, EV-EJVA-005 |
+| LAB-JDOG | 192.168.128.4 | Candidato DC-1 en UTM; conectividad y TCP | EV-JDOG-001, EV-JDOG-002 |
+
+Modalidad: Jaime declara Black Box para el inicio sin credenciales; el nombre de la VM sí era conocido. Esta denominación describe su planteamiento inicial, no certifica desconocimiento total de todos los integrantes. La revisión posterior trabaja con evidencias compartidas. El conocimiento previo exacto y el aislamiento no están completamente documentados; no se declara una modalidad homogénea sin corroboración.
+
+La información de usuarios, archivos, CMS y puertos se limita a estas instancias. No se comprobó UDP de forma independiente ni se cubrieron exhaustivamente todos los vectores locales.
 
 ## 07. Exclusiones
 
@@ -46,19 +71,40 @@ Excluidos otros grupos, equipos personales, redes institucionales e Internet pú
 
 ## 08. Rules of Engagement
 
-Pruebas controladas solo en DC-1 aislada; sin DoS, borrado, persistencia permanente ni pivoteo. PENDIENTE: reglas operativas, parada y manejo de evidencia acordados.
+Las reglas del docente autorizan descubrimiento, enumeración, investigación, explotación controlada y escalamiento únicamente en DC-1 aislada. Se debe usar Host-Only/Internal y verificar IP, MAC y adaptador antes de cada nueva sesión. Las capturas recibidas acreditan conectividad, pero no sustituyen la configuración del hipervisor.
+
+Condiciones de parada: identidad o red dudosa; aparición de un activo ajeno; inestabilidad; efectos no previstos; o máximo privilegio suficiente para demostrar el objetivo. Tras root, limitarse a las comprobaciones y cierre acordados. No realizar DoS, borrado de datos, persistencia permanente ni pivoteo.
+
+Tratamiento de evidencia: conservar comando y salida completa, incluidos fallos; anotar autor, instancia, fecha/zona y snapshot; guardar originales, calcular SHA-256 y generar copias distintas si se redactan secretos. Una huella verifica integridad desde su registro, no certifica autenticidad ni fecha de la prueba.
+
+Cierre: inventariar modificaciones propias, detener listeners y retirar archivos/contenido de prueba de manera controlada o restaurar el snapshot. En esta revisión no se verificó limpieza. La ventana exacta de cada sesión, responsable de parada y snapshots usados no constan completos y deben confirmarse con los autores.
 
 ## 09. Metodología PTES
 
-PTES: Pre-Engagement, Intelligence Gathering, Threat Modeling, Vulnerability Analysis, Exploitation, Post-Exploitation y Reporting. PENDIENTE: explicar cómo se aplicó cada fase y sus límites.
+| Fase PTES | Aplicación en el ejercicio | Resultado y límite |
+|---|---|---|
+| Pre-Engagement | Objetivo, DC-1, límites y reglas del docente | Alcance escrito; aislamiento y snapshots sin prueba completa |
+| Intelligence Gathering | ARP, ping, Nmap, HTTP y RPC | Cuatro inventarios separados; los banners son indicios |
+| Threat Modeling | Priorizar aplicación, identidad y permisos locales | Hipótesis conectadas con activos en sección 13 |
+| Vulnerability Analysis | Contrastar comportamiento y fuentes técnicas | Ocho fichas; se separan duplicados y casos no demostrados |
+| Exploitation | Sesión web de Jaime y login SSH de Daniel | Acceso inicial visible; no mezclar cadenas |
+| Post-Exploitation | Identidad, permisos, SUID y lectura de bandera | EUID root observado; cobertura local parcial |
+| Reporting | Fichas, figuras, interpretación y remediaciones | Evidencia integrada en este PDF; aprobación cruzada pendiente |
+
+La secuencia no se reconstruye por el orden del nombre de una imagen. Algunas capturas se tomaron después de elevar privilegios. Se conservan esas limitaciones y se separa el procedimiento descrito del orden temporal probado.
 
 ## 10. Arquitectura del laboratorio
 
-Se registraron inicialmente dos instancias documentales: LAB-JACD (atacante 192.168.18.129, ens36; objetivo 192.168.18.130) y LAB-EJVA (atacante 192.168.81.129/24, ens36; objetivo 192.168.81.130). Eduardo muestra además ens33 192.168.80.128/24. Jaime declara Host-Only VMnet11; falta captura de configuración para verificar aislamiento.
+La figura de arquitectura es una reconstrucción lógica de las relaciones observadas. Las líneas representan conectividad de las pruebas; no certifican el modo del adaptador del hipervisor.
 
-PENDIENTE: diagrama del laboratorio, snapshots, identidad de las copias y verificación del modo de red. No presentar ambas IP como el mismo host en una única sesión.
+| Instancia | Atacante | Identidad del objetivo | Aislamiento |
+|---|---|---|---|
+| JACD | 192.168.18.129, ens36 | .18.130 / 00:0c:29:55:ea:9d | Host-Only VMnet11 declarado; falta captura |
+| DQH | 192.168.18.129, ens36 | .18.130 / 00:0c:29:45:c1:6e | Configuración no aportada |
+| EJVA | .81.129/24, ens36; también .80.128/24, ens33 | .81.130 / 00:0c:29:79:c1:61 | Configuración no aportada |
+| JDOG | Parrot reportado; IP no identificada en captura | .128.4 / CE:E9:EA:43:88:05 | UTM reportado; configuración no aportada |
 
-LAB-JDOG añade una tercera instancia: UTM/Parrot reportados, objetivo candidato 192.168.128.4. Identidad y aislamiento pendientes de corroborar.
+Aunque Jaime y Daniel comparten IP, las MAC son distintas. No se fusionan como una misma sesión. La IP de Juan es candidata hasta correlacionarla con la VM en UTM. No consta hash de imagen base, versión de hipervisor ni snapshot; no se inventan estos datos. Fuentes: EV-JACD-001, EV-DQH-001, EV-DQH-014, EV-EJVA-002 y EV-JDOG-001.
 
 ## 11. Reconocimiento e Intelligence Gathering
 
@@ -66,7 +112,7 @@ Jaime documentó descubrimiento ARP y ping, con tres respuestas y 0% de pérdida
 
 Nmap 7.98 mostró 22, 80, 111 y 57249/tcp abiertos en LAB-EJVA; 65531 puertos TCP cerrados (EV-EJVA-003/004). El escaneo de servicios identifica SSH, HTTP, rpcbind y status RPC (EV-EJVA-005). No se acredita escaneo UDP independiente. Jaime acredita 22/80/111/59236 con EV-JACD-015/016/017; la advertencia de fingerprinting limita la inferencia de sistema operativo.
 
-Las capturas se incluyen en el anexo de esta fuente; numeración final y legibilidad del PDF pendientes.
+Las capturas se incluyen y numeran en el anexo del PDF, con vínculos desde sus identificadores.
 
 Juan documenta ping 3/3 sin pérdida a 192.168.128.4 y Nmap 7.95 en curso (EV-JDOG-001), seguido de salida final EV-JDOG-002 con 22/80/111/47118 TCP abiertos. No se traslada el inventario de otras instancias a LAB-JDOG.
 
@@ -76,25 +122,36 @@ En LAB-EJVA, Nmap reporta OpenSSH 6.0p1 Debian 4+deb7u7, Apache 2.2.22 Debian, D
 
 Gobuster v3.6 encontró respuestas 200, 301 y 403; las consultas HTTP muestran robots.txt, README, web.config y una respuesta de xmlrpc.php que acepta POST. Las rutas no demuestran por sí mismas exposición sensible ni ejecución remota. El fragmento README no acredita versión menor de Drupal. La línea de WordPress/WPScan no tiene resultado y no coincide con el CMS observado.
 
-PENDIENTE: recuperar salidas originales, caracterizar cada servicio y formular hipótesis verificables. Conservar errores visibles: URL como comando de shell y head con argumento 30~.
+Limitación: no se recibieron salidas originales de todas las herramientas; las hipótesis se explican en la sección 13. Conservar errores visibles: URL como comando de shell y head con argumento 30~.
 
 ## 13. Threat Modeling
 
-Modelo preliminar basado en LAB-EJVA; no equivale a hallazgos confirmados.
+El adversario del escenario tiene acceso a la red del laboratorio y comienza sin privilegios en la instancia. Los activos son el contenido web, credenciales, archivos del sistema y control administrativo. Los impactos organizacionales siguientes son una interpretación del escenario simulado, no pérdidas reales medidas.
 
-| Superficie | Evidencia | Hipótesis a investigar | Prioridad propuesta |
-|---|---|---|---|
-| HTTP / aplicación identificada como Drupal | EV-EJVA-005 a 011 | Comportamientos o versiones que requieran validación técnica | Alta por amplitud de superficie observada |
-| SSH | EV-EJVA-005 | Configuración y autenticación que ameriten pruebas dentro del alcance | Media |
-| RPC | EV-EJVA-005 | Programas expuestos y necesidad de exposición | Media |
+| Activo / frontera | Hipótesis y precondición | Validación / decisión |
+|---|---|---|
+| Aplicación web: red a proceso web | Drupal expuesto podría permitir ejecución sin login | Prioridad alta; PT-001 acredita shell www-data, EV-JACD-003 |
+| Cuenta del sistema: red a usuario local | SSH con password y candidato predecible podría dar sesión | Prioridad media inicial; PT-007 acredita login, EV-DQH-009 |
+| Sistema: usuario bajo a root | find con dueño root y SUID puede ejecutar procesos privilegiados | Prioridad alta tras acceso; PT-002/PT-008, EV-DQH-011 |
+| Administración CMS | Hash accesible tras compromiso y contraseña predecible | PT-003: recuperación y login visibles; falta origen del hash |
+| Contenido ejecutable | Administrador habilita PHP Filter y publica código | PT-004: escenario condicionado; no entrada anónima original |
+| Recursos públicos / RPC | Archivos o programas expuestos podrían ampliar superficie | PT-006 sin impacto demostrado; RPC no prueba NFS expuesto |
 
-PENDIENTE: activos/impacto del escenario, precondiciones, TEST y criterios de aceptación. No asignar CVE o exploit antes de investigación y validación propias.
+Criterio de aceptación: observar resultado con identidad y privilegios, no solo versión o nombre de exploit. Criterio de descarte: prueba suficiente que refute la hipótesis en sus precondiciones; un intento fallido o una wordlist agotada no bastan. Drupalgeddon2 se mantiene como posible, sin PoC propia; no es prioridad adicional una vez cumplido el objetivo de acceso y escalamiento.
 
 ## 14. Análisis de vulnerabilidades
 
 Hay resultados de explotación respaldados por capturas y ocho fichas registradas. PT-001/002/003/004/007/008 fueron reportadas confirmadas por sus autores; su estado editorial es en-validacion hasta revisión cruzada. Las fichas distinguen qué se observa y qué interpretación falta cerrar. PT-005 sigue como hipótesis y PT-006 como exposición observada sin impacto demostrado.
 
 No se confirma CVE-2018-7600 a partir del módulo utilizado para CVE-2014-3704. No se atribuye debilidad del algoritmo de hash solo por recuperar una contraseña. Los vectores CVSS propuestos requieren justificación por métrica y alcance; las cifras no representan una nota de madurez del sistema.
+
+### Interpretación de la severidad y del impacto
+
+La severidad técnica no equivale a calificación académica. CVSS 3.1 se usa para describir una vulnerabilidad individual, no sumar la cadena. PT-001 conserva 9.8 como propuesta de su autor; requiere justificar impactos del componente Drupal. PT-002/PT-008 proponen 7.8: AV:L por ejecución local, AC:L por mecanismo directo, PR:L por sesión previa, UI:N sin otra persona, S:U y C/I/A:H por control administrativo potencial. La lectura de la bandera prueba acceso, mientras modificación y denegación son impactos potenciales no ejecutados.
+
+PT-007 conserva el vector recibido, cuyo resultado es 9.1 y no 8.1; C:H e I:H no quedan justificados solamente por leer flag4.txt. Por eso no se acepta ese número como valoración final. PT-003 necesita delimitar cómo se obtuvo el hash. PT-004 depende de una habilitación administrativa inducida. PT-005 y PT-006 carecen de impacto validado suficiente para asignar un score defensible. No se usan puntuaciones arbitrarias para completar casillas.
+
+En una organización equivalente, la alteración de contenido afectaría integridad y confianza del servicio; el acceso a configuración o secretos afectaría confidencialidad; root permitiría interferir con operación y recuperación. Son consecuencias razonadas del privilegio observado, no incidentes empresariales ocurridos en este laboratorio.
 
 ## 15. Resumen de hallazgos
 
@@ -109,7 +166,7 @@ No se confirma CVE-2018-7600 a partir del módulo utilizado para CVE-2014-3704. 
 | PT-007 | Credencial SSH flag4 | en-validacion | Hydra y login observados |
 | PT-008 | SUID find, Daniel | en-validacion | EUID root observado; misma causa que PT-002 |
 
-Puntajes definitivos y aprobación de otro integrante: PENDIENTE. No son ocho vulnerabilidades únicas confirmadas.
+Los puntajes definitivos y la aprobación de otro integrante siguen sin cerrar; no se simula una firma de revisión. No son ocho vulnerabilidades únicas confirmadas.
 
 ## 16. Explotación
 
@@ -125,7 +182,7 @@ LAB-JACD: se corroboró identidad de usuario web y hostname (EV-JACD-009). El au
 
 El relato de intento Dirty COW no se da por demostrado en todas sus fases: EV-JACD-019 muestra únicamente transferencia de dirty.c. Registrar error real y cambios; no deducir vulnerabilidad ni parche por un intento fallido.
 
-PENDIENTE: completar cobertura de usuarios, permisos, tareas y procesos, explicar qué no se evaluó, y documentar retirada de artefactos/restauración.
+Cobertura no acreditada de forma completa: sudo, SGID, capabilities, cron, servicios/procesos, claves e historial y reutilización de contraseñas. No se afirma ausencia de fallas en estos frentes. El acceso root ya obtenido permite cerrar el objetivo sin ampliar indiscriminadamente la explotación. Limpieza y restauración no verificadas.
 
 ## 18. Escalamiento de privilegios
 
@@ -155,7 +212,7 @@ flowchart LR
  end
 ```
 
-PENDIENTE: renderizar este diagrama como figura propia dentro del PDF y corroborar cronología con autores.
+El PDF representa estos recorridos como diagrama propio. La continuidad temporal completa sigue sujeta a corroboración con los autores.
 
 ## 20. Hallazgos técnicos detallados
 
@@ -384,7 +441,7 @@ Pendiente.
 - Autor / revisor / fechas: DQH / pendiente / 2026-10-04
 - Activo / instancia / snapshot / IP / puerto / servicio / versión: LAB-DQH / 192.168.18.130 / puerto 22 / SSH
 - Hipótesis / sesión de origen: TEST-DQH-001
-- Severidad y razonamiento: Alta. Permite acceso directo e interactivo al servidor a nivel del sistema operativo.
+- Severidad y razonamiento: pendiente de aprobación. Acceso interactivo no privilegiado demostrado; la categoría debe corresponder al vector finalmente justificado.
 - CVSS: 3.1, 9.1 (Crítica para este vector; propuesta pendiente de justificar impactos), CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N (C:H e I:H significan impacto alto; justificar su alcance en la cuenta no privilegiada).
 - CVE / CWE: CWE-521: Weak Password Requirements. CWE-258 no aplica: la contraseña no está vacía.
 
@@ -417,7 +474,7 @@ Impacto técnico: Compromiso parcial del servidor con permisos de un usuario no 
 
 #### Remediación y comprobación
 
-Se recomienda deshabilitar la autenticación por contraseña en SSH modificando `/etc/ssh/sshd_config` (`PasswordAuthentication no`) y utilizar únicamente claves públicas (Ed25519 o RSA fuerte). Adicionalmente, las contraseñas de todos los usuarios locales deben someterse a una política de complejidad fuerte.
+En un servidor actualizado y con acceso alternativo verificado, se recomienda deshabilitar la autenticación por contraseña en SSH modificando `/etc/ssh/sshd_config` (`PasswordAuthentication no`) y utilizar únicamente claves públicas (Ed25519 o RSA fuerte). Adicionalmente, las contraseñas de todos los usuarios locales deben someterse a una política de complejidad fuerte.
 Comprobación: Intentar login SSH solo con contraseña, debe ser rechazado por el servidor.
 
 #### Referencias
@@ -507,7 +564,7 @@ Son recomendaciones y retests propuestos, no correcciones ejecutadas. Prioridad 
 
 El objetivo de demostrar acceso y privilegio efectivo root cuenta con evidencia en las instancias de Jaime y Daniel. La solidez de la entrega depende ahora de relacionar cada afirmación con la imagen correcta, separar instancias y distinguir configuraciones iniciales de cambios hechos durante las pruebas.
 
-No se concluye que toda hipótesis esté validada ni que root pruebe todas las vulnerabilidades enumeradas. Quedan pendientes revisión cruzada, severidades, arquitectura y limpieza documentadas, y revisión visual del PDF.
+No se concluye que toda hipótesis esté validada ni que root pruebe todas las vulnerabilidades enumeradas. Quedan pendientes revisión cruzada, severidades, arquitectura y limpieza documentadas, y aprobación técnica final del equipo.
 
 ## 24. Referencias
 
@@ -520,11 +577,11 @@ Fuentes técnicas consultadas el 2026-10-07:
 - MITRE, CWE-258: https://cwe.mitre.org/data/definitions/258.html — descartar mapeo de contraseña vacía para una contraseña no vacía.
 - Drupal, ciclo de soporte: https://www.drupal.org/about/core/policies/core-release-cycles/schedule — migración desde Drupal 7 sin soporte comunitario.
 
-PENDIENTE: completar versiones y fuentes exactas de herramientas/exploits ejecutados, y revisar referencias adicionales de cada ficha.
+No se aportaron versiones y hashes locales de todos los exploits ejecutados. Las fuentes técnicas describen mecanismos; no sustituyen la prueba propia ni certifican la versión instalada.
 
 ## 25. Anexos técnicos
 
-Evidencias recibidas: copias PNG extraídas sin modificar de los cuadernos. Los identificadores EV se conservan; PENDIENTE numeración de figuras y páginas finales. Fechas exactas no sustentadas se mantienen como no registradas. No se recibieron salidas TXT originales.
+Evidencias recibidas: copias PNG extraídas sin modificar de los cuadernos. Los identificadores EV se conservan; La edición PDF asigna números de figura y páginas reales. Fechas exactas no sustentadas se mantienen como no registradas. No se recibieron salidas TXT originales.
 
 ### EV-JACD-001 · Descubrimiento ARP
 
@@ -694,7 +751,7 @@ Se ve nmap -sV -sC -p- 192.168.128.4. Nmap 7.95 inicia el 2026-10-03 a las 17:41
 
 Estado: conectividad observada y escaneo en curso al capturar. Objetivo candidato 192.168.128.4; falta vincular su MAC con el adaptador de DC-1 en UTM, evidenciar aislamiento y obtener la salida final. UTM/Parrot son información aportada por Juan, no configuración comprobada por esta imagen. No trasladar puertos ni versiones de LAB-JACD o LAB-EJVA a LAB-JDOG. Sin vulnerabilidades confirmadas.
 
-PENDIENTE: numeración de figura, página y revisión de legibilidad en PDF.
+La figura y página se asignan en la edición PDF; se conserva la captura original.
 
 ### EV-JDOG-002 · Resultado final de Nmap
 

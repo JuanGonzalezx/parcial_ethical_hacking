@@ -1,0 +1,18 @@
+{
+  "fecha_revision": "2026-10-07",
+  "documentos": [
+    {
+      "ruta": "output/pdf/PARCIAL_PENTEST_MnzHack_DC-1.pdf",
+      "paginas": 73,
+      "sha256": "a58d680a9a12972aa91f965cbdc9c638e5cd63f0b42454301f771f4acf721419"
+    },
+    {
+      "ruta": "output/pdf/GUIA_SUSTENTACION_MnzHack_DC-1.pdf",
+      "paginas": 11,
+      "sha256": "bb90865c7648891f1e5ab3ffd4825a9229782836aae53d1b03e211f44bead30c"
+    }
+  ],
+  "evidencias_verificadas": 47,
+  "apartados_con_marcador": 25,
+  "limite": "Control documental y visual; no certifica aprobación humana, nota ni nuevas pruebas."
+}
